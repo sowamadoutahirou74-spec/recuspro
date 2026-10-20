@@ -5,11 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Générateur de Reçus Pro</title>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,400;1,700&family=Lato:wght@300;400;700&family=Oswald:wght@400;600;700&display=swap" rel="stylesheet">
-<style>:root{--dark:#0d1b2e;--navy:#1a2e4a;--orange:#e8621a;--gold:#f0b429;--teal:#0d9488;--blue:#1a5cbe;--purple:#6b21a8;--red:#dc2626;--light:#f0f4fa;--border:#c8d4e8;--white:#ffffff;--text:#1e2d3d;--muted:#64748b}*{box-sizing:border-box;margin:0;padding:0}#authScreen{position:fixed;inset:0;z-index:99999;background:linear-gradient(160deg,#0a1628 0%,#1a2e4a 50%,#0d1b2e 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px;overflow-y:auto;font-family:'Lato',sans-serif}#authScreen.hidden{display:none !important}.auth-logo{text-align:center;margin-bottom:28px}.auth-logo-icon{width:72px;height:72px;background:linear-gradient(135deg,#e8621a,#c0521a);border-radius:18px;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;box-shadow:0 8px 32px rgba(232,98,26,0.4);font-size:32px}.auth-logo h1{font-family:'Oswald',sans-serif;font-size:1.8rem;font-weight:700;color:#fff;letter-spacing:3px;text-transform:uppercase}.auth-logo p{color:rgba(255,255,255,0.5);font-size:0.82rem;letter-spacing:1px;margin-top:4px}.auth-card{background:#fff;border-radius:20px;width:100%;max-width:400px;overflow:hidden;box-shadow:0 24px 64px rgba(0,0,0,0.5)}.auth-tabs{display:grid;grid-template-columns:1fr 1fr}.auth-tab{padding:16px;text-align:center;cursor:pointer;font-family:'Oswald',sans-serif;font-size:1rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;transition:all .2s;background:#f0f4fa;color:#94a3b8;border:none;outline:none}.auth-tab.active{background:#fff;color:#1a2e4a;border-bottom:3px solid #e8621a}.auth-body{padding:24px 24px 20px}.auth-field{margin-bottom:16px}.auth-field label{display:block;font-size:0.78rem;font-weight:700;color:#1a2e4a;letter-spacing:0.5px;text-transform:uppercase;margin-bottom:6px}.auth-field input{width:100%;border:1.5px solid #c8d4e8;border-radius:10px;padding:12px 14px;font-size:1rem;font-family:'Lato',sans-serif;color:#1e2d3d;background:#f4f6fa;outline:none;transition:all .2s}.auth-field input:focus{border-color:#1a2e4a;background:#fff;box-shadow:0 0 0 3px rgba(26,46,74,0.1)}.auth-field .input-icon-wrap{position:relative}.auth-field .input-icon-wrap input{padding-left:42px}.auth-field .input-icon{position:absolute;left:12px;top:50%;transform:translateY(-50%);font-size:18px;pointer-events:none}.auth-field .eye-toggle{position:absolute;right:12px;top:50%;transform:translateY(-50%);background:none;border:none;cursor:pointer;font-size:18px;color:#94a3b8;padding:0;line-height:1}.auth-divider{display:flex;align-items:center;gap:10px;margin:16px 0}.auth-divider::before,.auth-divider::after{content:'';flex:1;height:1px;background:#e2e8f0}.auth-divider span{font-size:0.75rem;color:#94a3b8;white-space:nowrap}.auth-btn{width:100%;padding:14px;border:none;border-radius:10px;font-family:'Oswald',sans-serif;font-size:1rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:all .2s;margin-top:4px}.auth-btn-primary{background:linear-gradient(135deg,#e8621a,#c0521a);color:#fff;box-shadow:0 4px 20px rgba(232,98,26,0.35)}.auth-btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(232,98,26,0.45)}.auth-btn-google{background:#fff;color:#1e2d3d;border:1.5px solid #e2e8f0;display:flex;align-items:center;justify-content:center;gap:10px;font-size:0.9rem;margin-top:10px}.auth-btn-google:hover{background:#f4f6fa}.auth-error{background:#fee2e2;color:#dc2626;border-radius:8px;padding:10px 14px;font-size:0.82rem;margin-bottom:14px;display:none;font-weight:600}.auth-error.show{display:block}.auth-success{background:#dcfce7;color:#16a34a;border-radius:8px;padding:10px 14px;font-size:0.82rem;margin-bottom:14px;display:none;font-weight:600}.auth-success.show{display:block}.auth-footer{text-align:center;padding:14px 24px 20px}.auth-footer a{color:#e8621a;font-weight:700;cursor:pointer;text-decoration:none;font-size:0.82rem}.auth-field .pwd-strength{margin-top:5px;display:flex;gap:4px}.pwd-bar{flex:1;height:4px;border-radius:2px;background:#e2e8f0;transition:background .3s}.auth-avatar-row{display:flex;gap:10px;justify-content:center;margin-bottom:16px;flex-wrap:wrap}.auth-avatar-btn{width:44px;height:44px;border-radius:50%;border:2.5px solid transparent;cursor:pointer;font-size:22px;display:flex;align-items:center;justify-content:center;background:#f4f6fa;transition:all .2s}.auth-avatar-btn.selected{border-color:#e8621a;background:#fff3ed;transform:scale(1.1)}.auth-terms{font-size:0.75rem;color:#94a3b8;text-align:center;margin-top:12px}.auth-terms a{color:#1a2e4a;font-weight:600}#appRoot{}body{font-family:'Lato',sans-serif;font-size:16px;background:#0a1628;min-height:100vh;padding:20px 14px 40px;color:var(--text)}.app-hero{text-align:center;margin-bottom:26px}.app-hero h1{font-family:'Oswald',sans-serif;font-size:2.4rem;font-weight:700;color:#fff;letter-spacing:4px;text-transform:uppercase}.app-hero h1 span{color:var(--orange)}.app-hero p{color:rgba(255,255,255,0.55);font-size:0.88rem;letter-spacing:2px;margin-top:4px;text-transform:uppercase}.picker-section{margin-bottom:12px}.picker-label{font-family:'Oswald',sans-serif;color:rgba(255,255,255,0.6);font-size:0.72rem;letter-spacing:3px;text-transform:uppercase;margin-bottom:10px;text-align:center}.picker-grid::-webkit-scrollbar{display:none}.picker-grid{display:flex;gap:4px;overflow-x:auto;padding-bottom:6px;flex-wrap:nowrap;-webkit-overflow-scrolling:touch;scrollbar-width:none}.picker-card{flex-shrink:0;width:48px;cursor:pointer;border-radius:7px;overflow:hidden;border:2px solid transparent;transition:all 0.2s;background:#1a2a40}.picker-card:hover{transform:translateY(-2px);border-color:rgba(255,255,255,0.3)}.picker-card.active{border-color:var(--orange);box-shadow:0 0 0 2px rgba(232,98,26,0.3)}.picker-thumb{height:32px;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:900;color:#fff}.picker-name{padding:3px 2px;font-size:0.52rem;font-weight:700;letter-spacing:0px;text-align:center;color:rgba(255,255,255,0.8);text-transform:uppercase;background:rgba(0,0,0,0.3);line-height:1.2}.app-wrapper{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:360px 1fr;gap:22px;align-items:start;width:100%}.form-panel{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.5)}.form-header{padding:16px 22px;display:flex;align-items:center;gap:10px}.form-header h2{font-family:'Oswald',sans-serif;color:#fff;font-size:1.05rem;font-weight:700;letter-spacing:2px;text-transform:uppercase}.form-body{padding:18px 20px;display:flex;flex-direction:column;gap:12px}.fsec{font-family:'Oswald',sans-serif;font-size:0.78rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding-bottom:6px;border-bottom:1.5px solid var(--border);margin-top:4px}label{display:block;font-size:0.82rem;font-weight:700;color:var(--navy);letter-spacing:0.5px;margin-bottom:4px;text-transform:uppercase}input,textarea,select{width:100%;border:1.5px solid var(--border);border-radius:7px;padding:10px 13px;font-family:'Lato',sans-serif;font-size:0.95rem;color:var(--text);background:var(--light);transition:border-color 0.2s,box-shadow 0.2s;outline:none}input:focus,textarea:focus,select:focus{border-color:var(--navy);box-shadow:0 0 0 3px rgba(26,46,74,0.1);background:#fff}.g2{display:grid;grid-template-columns:1fr 1fr;gap:8px}.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px}.items-hdr{display:grid;grid-template-columns:48px 1fr 80px 80px 30px;gap:5px;padding:0 2px;font-size:0.82rem;font-weight:700;letter-spacing:0.5px;text-transform:uppercase;color:var(--muted)}.item-row{display:grid;grid-template-columns:48px 1fr 80px 80px 30px;gap:5px;align-items:center;animation:fadeRow .25s ease}@keyframes fadeRow{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:translateY(0)}}.item-row input{padding:10px 8px;font-size:0.95rem}.amt-disp{background:var(--navy);color:var(--gold);border:none;border-radius:7px;padding:10px 8px;font-size:0.95rem;font-weight:700;text-align:right}.btn-rm{width:30px;height:30px;background:#fee2e2;color:#dc2626;border:none;border-radius:6px;cursor:pointer;font-size:17px;display:flex;align-items:center;justify-content:center;transition:background .15s}.btn-rm:hover{background:#fca5a5}.btn-add{background:none;border:1.5px dashed var(--orange);color:var(--orange);padding:9px;border-radius:7px;cursor:pointer;font-family:'Oswald',sans-serif;font-size:0.88rem;font-weight:600;letter-spacing:1px;width:100%;transition:all .2s}.btn-add:hover{background:var(--orange);color:#fff}.style-bar{display:flex;gap:4px;flex-wrap:wrap;margin-bottom:5px}
+<style>:root{--dark:#1a0a00;--navy:#004d26;--orange:#CE1126;--gold:#f0b429;--teal:#0d9488;--blue:#1a5cbe;--purple:#6b21a8;--red:#dc2626;--light:#f0f4fa;--border:#c8d4e8;--white:#ffffff;--text:#1e2d3d;--muted:#64748b}*{box-sizing:border-box;margin:0;padding:0}#authScreen{position:fixed;inset:0;z-index:99999;background:linear-gradient(160deg,#CE1126 0%,#8B0010 25%,#4a0800 40%,#3d2000 55%,#004d26 80%,#009A44 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px;overflow-y:auto;font-family:'Lato',sans-serif}#authScreen.hidden{display:none !important}.auth-logo{text-align:center;margin-bottom:28px}.auth-logo-icon{width:72px;height:72px;background:linear-gradient(135deg,#CE1126,#a50e1f);border-radius:18px;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;box-shadow:0 8px 32px rgba(232,98,26,0.4);font-size:32px}.auth-logo h1{font-family:'Oswald',sans-serif;font-size:1.8rem;font-weight:700;color:#fff;letter-spacing:3px;text-transform:uppercase}.auth-logo p{color:rgba(255,255,255,0.5);font-size:0.82rem;letter-spacing:1px;margin-top:4px}.auth-card{background:#fff;border-radius:20px;width:100%;max-width:400px;overflow:hidden;box-shadow:0 24px 64px rgba(0,0,0,0.5)}.auth-tabs{display:grid;grid-template-columns:1fr 1fr}.auth-tab{padding:16px;text-align:center;cursor:pointer;font-family:'Oswald',sans-serif;font-size:1rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;transition:all .2s;background:#f0f4fa;color:#94a3b8;border:none;outline:none}.auth-tab.active{background:#fff;color:#004d26;border-bottom:3px solid #CE1126}.auth-body{padding:24px 24px 20px}.auth-field{margin-bottom:16px}.auth-field label{display:block;font-size:0.78rem;font-weight:700;color:#004d26;letter-spacing:0.5px;text-transform:uppercase;margin-bottom:6px}.auth-field input{width:100%;border:1.5px solid #c8d4e8;border-radius:10px;padding:12px 14px;font-size:1rem;font-family:'Lato',sans-serif;color:#1e2d3d;background:#f4f6fa;outline:none;transition:all .2s}.auth-field input:focus{border-color:#004d26;background:#fff;box-shadow:0 0 0 3px rgba(26,46,74,0.1)}.auth-field .input-icon-wrap{position:relative}.auth-field .input-icon-wrap input{padding-left:42px}.auth-field .input-icon{position:absolute;left:12px;top:50%;transform:translateY(-50%);font-size:18px;pointer-events:none}.auth-field .eye-toggle{position:absolute;right:12px;top:50%;transform:translateY(-50%);background:none;border:none;cursor:pointer;font-size:18px;color:#94a3b8;padding:0;line-height:1}.auth-divider{display:flex;align-items:center;gap:10px;margin:16px 0}.auth-divider::before,.auth-divider::after{content:'';flex:1;height:1px;background:#e2e8f0}.auth-divider span{font-size:0.75rem;color:#94a3b8;white-space:nowrap}.auth-btn{width:100%;padding:14px;border:none;border-radius:10px;font-family:'Oswald',sans-serif;font-size:1rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:all .2s;margin-top:4px}.auth-btn-primary{background:linear-gradient(135deg,#CE1126,#a50e1f);color:#fff;box-shadow:0 4px 20px rgba(232,98,26,0.35)}.auth-btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(232,98,26,0.45)}.auth-btn-google{background:#fff;color:#1e2d3d;border:1.5px solid #e2e8f0;display:flex;align-items:center;justify-content:center;gap:10px;font-size:0.9rem;margin-top:10px}.auth-btn-google:hover{background:#f4f6fa}.auth-error{background:#fee2e2;color:#dc2626;border-radius:8px;padding:10px 14px;font-size:0.82rem;margin-bottom:14px;display:none;font-weight:600}.auth-error.show{display:block}.auth-success{background:#dcfce7;color:#16a34a;border-radius:8px;padding:10px 14px;font-size:0.82rem;margin-bottom:14px;display:none;font-weight:600}.auth-success.show{display:block}.auth-footer{text-align:center;padding:14px 24px 20px}.auth-footer a{color:#CE1126;font-weight:700;cursor:pointer;text-decoration:none;font-size:0.82rem}.auth-field .pwd-strength{margin-top:5px;display:flex;gap:4px}.pwd-bar{flex:1;height:4px;border-radius:2px;background:#e2e8f0;transition:background .3s}.auth-avatar-row{display:flex;gap:10px;justify-content:center;margin-bottom:16px;flex-wrap:wrap}.auth-avatar-btn{width:44px;height:44px;border-radius:50%;border:2.5px solid transparent;cursor:pointer;font-size:22px;display:flex;align-items:center;justify-content:center;background:#f4f6fa;transition:all .2s}.auth-avatar-btn.selected{border-color:#CE1126;background:#fff3ed;transform:scale(1.1)}.auth-terms{font-size:0.75rem;color:#94a3b8;text-align:center;margin-top:12px}.auth-terms a{color:#004d26;font-weight:600}#appRoot{}body{font-family:'Lato',sans-serif;font-size:16px;background:#001a09;min-height:100vh;padding:20px 14px 40px;color:var(--text)}.app-hero{text-align:center;margin-bottom:26px}.app-hero h1{font-family:'Oswald',sans-serif;font-size:2.4rem;font-weight:700;color:#fff;letter-spacing:4px;text-transform:uppercase}.app-hero h1 span{color:var(--orange)}.app-hero p{color:rgba(255,255,255,0.55);font-size:0.88rem;letter-spacing:2px;margin-top:4px;text-transform:uppercase}.picker-section{margin-bottom:12px}.picker-label{font-family:'Oswald',sans-serif;color:rgba(255,255,255,0.6);font-size:0.72rem;letter-spacing:3px;text-transform:uppercase;margin-bottom:10px;text-align:center}.picker-grid::-webkit-scrollbar{display:none}.picker-grid{display:flex;gap:4px;overflow-x:auto;padding-bottom:6px;flex-wrap:nowrap;-webkit-overflow-scrolling:touch;scrollbar-width:none}.picker-card{flex-shrink:0;width:48px;cursor:pointer;border-radius:7px;overflow:hidden;border:2px solid transparent;transition:all 0.2s;background:#1a2a40}.picker-card:hover{transform:translateY(-2px);border-color:rgba(255,255,255,0.3)}.picker-card.active{border-color:var(--orange);box-shadow:0 0 0 2px rgba(232,98,26,0.3)}.picker-thumb{height:32px;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:900;color:#fff}.picker-name{padding:3px 2px;font-size:0.52rem;font-weight:700;letter-spacing:0px;text-align:center;color:rgba(255,255,255,0.8);text-transform:uppercase;background:rgba(0,0,0,0.3);line-height:1.2}.app-wrapper{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:360px 1fr;gap:22px;align-items:start;width:100%}.form-panel{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.5)}.form-header{padding:16px 22px;display:flex;align-items:center;gap:10px}.form-header h2{font-family:'Oswald',sans-serif;color:#fff;font-size:1.05rem;font-weight:700;letter-spacing:2px;text-transform:uppercase}.form-body{padding:18px 20px;display:flex;flex-direction:column;gap:12px}.fsec{font-family:'Oswald',sans-serif;font-size:0.78rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding-bottom:6px;border-bottom:1.5px solid var(--border);margin-top:4px}label{display:block;font-size:0.82rem;font-weight:700;color:var(--navy);letter-spacing:0.5px;margin-bottom:4px;text-transform:uppercase}input,textarea,select{width:100%;border:1.5px solid var(--border);border-radius:7px;padding:10px 13px;font-family:'Lato',sans-serif;font-size:0.95rem;color:var(--text);background:var(--light);transition:border-color 0.2s,box-shadow 0.2s;outline:none}input:focus,textarea:focus,select:focus{border-color:var(--navy);box-shadow:0 0 0 3px rgba(26,46,74,0.1);background:#fff}.g2{display:grid;grid-template-columns:1fr 1fr;gap:8px}.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px}.items-hdr{display:grid;grid-template-columns:48px 1fr 80px 80px 30px;gap:5px;padding:0 2px;font-size:0.82rem;font-weight:700;letter-spacing:0.5px;text-transform:uppercase;color:var(--muted)}.item-row{display:grid;grid-template-columns:48px 1fr 80px 80px 30px;gap:5px;align-items:center;animation:fadeRow .25s ease}@keyframes fadeRow{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:translateY(0)}}.item-row input{padding:10px 8px;font-size:0.95rem}.amt-disp{background:var(--navy);color:var(--gold);border:none;border-radius:7px;padding:10px 8px;font-size:0.95rem;font-weight:700;text-align:right}.btn-rm{width:30px;height:30px;background:#fee2e2;color:#dc2626;border:none;border-radius:6px;cursor:pointer;font-size:17px;display:flex;align-items:center;justify-content:center;transition:background .15s}.btn-rm:hover{background:#fca5a5}.btn-add{background:none;border:1.5px dashed var(--orange);color:var(--orange);padding:9px;border-radius:7px;cursor:pointer;font-family:'Oswald',sans-serif;font-size:0.88rem;font-weight:600;letter-spacing:1px;width:100%;transition:all .2s}.btn-add:hover{background:var(--orange);color:#fff}.style-bar{display:flex;gap:4px;flex-wrap:wrap;margin-bottom:5px}
 .style-btn{border:1.5px solid var(--border);background:#f0f4fa;color:var(--navy);border-radius:5px;padding:4px 9px;font-size:0.82rem;font-weight:700;cursor:pointer;transition:all .15s;line-height:1.4;font-family:'Lato',sans-serif}
 .style-btn:hover{background:#e2e8f0}
 .style-btn.active{background:var(--navy);color:#fff;border-color:var(--navy)}
-.btn-whatsapp{padding:12px;border:none;border-radius:10px;font-family:'Oswald',sans-serif;font-size:0.95rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;cursor:pointer;width:100%;background:linear-gradient(135deg,#25d366,#128c3e);color:#fff;transition:all .2s;display:flex;align-items:center;justify-content:center;gap:8px}.btn-whatsapp:hover{transform:translateY(-2px);filter:brightness(1.1)}.btn-print{padding:12px;border:none;border-radius:10px;font-family:'Oswald',sans-serif;font-size:0.95rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;cursor:pointer;width:100%;background:#1e2d3d;color:#fff;transition:all .2s}.btn-print:hover{background:#0d1b2e;transform:translateY(-2px)}.preview-panel{}.prev-lbl{font-family:'Oswald',sans-serif;color:rgba(255,255,255,0.5);font-size:0.78rem;letter-spacing:3px;text-transform:uppercase;margin-bottom:8px}#invoice-preview{background:#fff;border-radius:12px;overflow-x:auto;overflow-y:visible;box-shadow:0 20px 60px rgba(0,0,0,0.5);min-height:400px;word-break:break-word;-webkit-overflow-scrolling:touch}#invoice-preview table{table-layout:fixed;min-width:100%}#invoice-preview th{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:120px}@media print{@keyframes pulse {
+.btn-whatsapp{padding:12px;border:none;border-radius:10px;font-family:'Oswald',sans-serif;font-size:0.95rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;cursor:pointer;width:100%;background:linear-gradient(135deg,#25d366,#128c3e);color:#fff;transition:all .2s;display:flex;align-items:center;justify-content:center;gap:8px}.btn-whatsapp:hover{transform:translateY(-2px);filter:brightness(1.1)}.btn-print{padding:12px;border:none;border-radius:10px;font-family:'Oswald',sans-serif;font-size:0.95rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;cursor:pointer;width:100%;background:#1e2d3d;color:#fff;transition:all .2s}.btn-print:hover{background:#1a0a00;transform:translateY(-2px)}.preview-panel{}.prev-lbl{font-family:'Oswald',sans-serif;color:rgba(255,255,255,0.5);font-size:0.78rem;letter-spacing:3px;text-transform:uppercase;margin-bottom:8px}#invoice-preview{background:#fff;border-radius:12px;overflow-x:auto;overflow-y:visible;box-shadow:0 20px 60px rgba(0,0,0,0.5);min-height:400px;word-break:break-word;-webkit-overflow-scrolling:touch}#invoice-preview table{table-layout:fixed;min-width:100%}#invoice-preview th{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:120px}@media print{@keyframes pulse {
   0%,100% { box-shadow: 0 0 0 0 rgba(245,158,11,0.4); }
   50% { box-shadow: 0 0 0 8px rgba(245,158,11,0); }
 }
@@ -42,7 +42,7 @@
 /* ── SUBSCRIPTION ── */
 #subScreen {
   position:fixed;inset:0;z-index:99998;
-  background:linear-gradient(160deg,#0a1628 0%,#1a2e4a 60%,#0d1b2e 100%);
+  background:linear-gradient(160deg,#001a09 0%,#004d26 60%,#1a0a00 100%);
   display:none;flex-direction:column;align-items:center;justify-content:center;
   padding:20px;overflow-y:auto;font-family:'Lato',sans-serif;
 }
@@ -52,7 +52,7 @@
   overflow:hidden;box-shadow:0 24px 64px rgba(0,0,0,0.5);
 }
 .sub-header {
-  background:linear-gradient(135deg,#e8621a,#c0521a);
+  background:linear-gradient(135deg,#CE1126,#a50e1f);
   padding:24px;text-align:center;color:#fff;
 }
 .sub-header h2 { font-family:'Oswald',sans-serif;font-size:1.6rem;font-weight:800;letter-spacing:2px;margin-bottom:4px; }
@@ -62,9 +62,9 @@
   border:2px solid #e2e8f0;border-radius:12px;padding:16px;margin-bottom:14px;
   cursor:pointer;transition:all .2s;
 }
-.sub-plan.selected { border-color:#e8621a;background:#fff8f5; }
-.sub-plan-name { font-family:'Oswald',sans-serif;font-size:1rem;font-weight:700;color:#1a2e4a; }
-.sub-plan-price { font-size:1.4rem;font-weight:800;color:#e8621a;margin:4px 0; }
+.sub-plan.selected { border-color:#CE1126;background:#fff8f5; }
+.sub-plan-name { font-family:'Oswald',sans-serif;font-size:1rem;font-weight:700;color:#004d26; }
+.sub-plan-price { font-size:1.4rem;font-weight:800;color:#CE1126;margin:4px 0; }
 .sub-plan-desc { font-size:0.78rem;color:#64748b; }
 .sub-trial-badge {
   background:#dcfce7;color:#16a34a;border-radius:20px;
@@ -72,7 +72,7 @@
   display:inline-block;margin-bottom:12px;
 }
 .sub-code-wrap { margin-top:16px; }
-.sub-code-wrap label { font-size:0.8rem;font-weight:700;color:#1a2e4a;text-transform:uppercase;letter-spacing:0.5px;display:block;margin-bottom:6px; }
+.sub-code-wrap label { font-size:0.8rem;font-weight:700;color:#004d26;text-transform:uppercase;letter-spacing:0.5px;display:block;margin-bottom:6px; }
 .sub-code-wrap input {
   width:100%;border:1.5px solid #c8d4e8;border-radius:10px;
   padding:12px 14px;font-size:1rem;font-family:'Lato',sans-serif;
@@ -82,58 +82,58 @@
   width:100%;padding:14px;border:none;border-radius:10px;margin-top:12px;
   font-family:'Oswald',sans-serif;font-size:1rem;font-weight:700;
   letter-spacing:2px;text-transform:uppercase;cursor:pointer;
-  background:linear-gradient(135deg,#e8621a,#c0521a);color:#fff;
+  background:linear-gradient(135deg,#CE1126,#a50e1f);color:#fff;
   box-shadow:0 4px 20px rgba(232,98,26,0.35);
 }
 .sub-btn-trial {
   width:100%;padding:12px;border:1.5px solid #e2e8f0;border-radius:10px;margin-top:8px;
   font-family:'Oswald',sans-serif;font-size:0.9rem;font-weight:600;
   letter-spacing:1px;text-transform:uppercase;cursor:pointer;
-  background:#f8fafc;color:#1a2e4a;
+  background:#f8fafc;color:#004d26;
 }
 .sub-error { background:#fee2e2;color:#dc2626;border-radius:8px;padding:10px 14px;font-size:0.85rem;margin-top:10px;display:none;font-weight:600; }
 .sub-error.show { display:block; }
 .trial-banner {
   background:linear-gradient(135deg,#fef3c7,#fde68a);
-  border:1px solid #f59e0b;border-radius:10px;
+  border:1px solid #FCD116;border-radius:10px;
   padding:10px 14px;margin:8px 0 0;display:flex;
   align-items:center;gap:10px;font-size:0.82rem;color:#92400e;
 }
 
 /* ── ADMIN ── */
 #adminScreen {
-  position:fixed;inset:0;z-index:99999;background:#0a1628;
+  position:fixed;inset:0;z-index:99999;background:#001a09;
   display:none;flex-direction:column;font-family:'Lato',sans-serif;overflow:hidden;
 }
 #adminScreen.show { display:flex; }
 .admin-header {
-  background:linear-gradient(135deg,#1a2e4a,#0d1b2e);
+  background:linear-gradient(135deg,#004d26,#1a0a00);
   padding:16px 20px;display:flex;align-items:center;justify-content:space-between;
-  border-bottom:2px solid #e8621a;flex-shrink:0;
+  border-bottom:2px solid #CE1126;flex-shrink:0;
 }
 .admin-header h1 { font-family:'Oswald',sans-serif;font-size:1.2rem;font-weight:700;color:#fff;letter-spacing:2px; }
 .admin-close { background:none;border:none;color:#fff;font-size:22px;cursor:pointer;padding:4px 8px; }
-.admin-tabs { display:flex;background:#0d1b2e;border-bottom:1px solid #1a2e4a;flex-shrink:0;overflow-x:auto; }
+.admin-tabs { display:flex;background:#1a0a00;border-bottom:1px solid #004d26;flex-shrink:0;overflow-x:auto; }
 .admin-tab {
   padding:12px 16px;font-family:'Oswald',sans-serif;font-size:0.82rem;font-weight:600;
   letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,0.5);
   border:none;background:none;cursor:pointer;white-space:nowrap;border-bottom:3px solid transparent;
 }
-.admin-tab.active { color:#e8621a;border-bottom-color:#e8621a; }
+.admin-tab.active { color:#CE1126;border-bottom-color:#CE1126; }
 .admin-content { flex:1;overflow-y:auto;padding:16px; }
 .admin-card {
-  background:#1a2e4a;border-radius:12px;padding:16px;margin-bottom:12px;
+  background:#004d26;border-radius:12px;padding:16px;margin-bottom:12px;
 }
 .admin-card h3 { font-family:'Oswald',sans-serif;font-size:1rem;color:#fff;margin-bottom:12px;letter-spacing:1px; }
 .admin-stat-grid { display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:14px; }
 .admin-stat {
-  background:#0d1b2e;border-radius:10px;padding:14px;text-align:center;
-  border:1px solid #1a2e4a;
+  background:#1a0a00;border-radius:10px;padding:14px;text-align:center;
+  border:1px solid #004d26;
 }
-.admin-stat-num { font-family:'Oswald',sans-serif;font-size:1.8rem;font-weight:800;color:#e8621a; }
+.admin-stat-num { font-family:'Oswald',sans-serif;font-size:1.8rem;font-weight:800;color:#CE1126; }
 .admin-stat-lbl { font-size:0.72rem;color:rgba(255,255,255,0.5);margin-top:2px;text-transform:uppercase;letter-spacing:0.5px; }
 .admin-table { width:100%;border-collapse:collapse;font-size:0.8rem; }
-.admin-table th { padding:8px 10px;background:#0d1b2e;color:rgba(255,255,255,0.6);text-align:left;font-size:0.72rem;letter-spacing:0.5px;text-transform:uppercase; }
+.admin-table th { padding:8px 10px;background:#1a0a00;color:rgba(255,255,255,0.6);text-align:left;font-size:0.72rem;letter-spacing:0.5px;text-transform:uppercase; }
 .admin-table td { padding:9px 10px;border-bottom:1px solid rgba(255,255,255,0.05);color:#fff;vertical-align:middle; }
 .admin-table tr:hover td { background:rgba(255,255,255,0.03); }
 .badge { display:inline-block;padding:3px 9px;border-radius:20px;font-size:0.7rem;font-weight:700; }
@@ -142,24 +142,24 @@
 .badge-yellow { background:#fef9c3;color:#854d0e; }
 .badge-blue { background:#dbeafe;color:#1d4ed8; }
 .admin-input {
-  width:100%;background:#0d1b2e;border:1.5px solid #1a2e4a;border-radius:8px;
+  width:100%;background:#1a0a00;border:1.5px solid #004d26;border-radius:8px;
   color:#fff;padding:10px 12px;font-size:0.9rem;font-family:'Lato',sans-serif;
   outline:none;margin-bottom:8px;
 }
-.admin-input:focus { border-color:#e8621a; }
+.admin-input:focus { border-color:#CE1126; }
 .admin-btn {
   padding:10px 16px;border:none;border-radius:8px;font-family:'Oswald',sans-serif;
   font-size:0.85rem;font-weight:700;letter-spacing:1px;cursor:pointer;
   text-transform:uppercase;transition:all .2s;
 }
-.admin-btn-primary { background:#e8621a;color:#fff; }
+.admin-btn-primary { background:#CE1126;color:#fff; }
 .admin-btn-danger { background:#dc2626;color:#fff; }
 .admin-btn-sm { padding:5px 10px;font-size:0.72rem;border-radius:6px; }
-.admin-select { background:#0d1b2e;border:1.5px solid #1a2e4a;border-radius:8px;color:#fff;padding:10px 12px;font-size:0.9rem;width:100%;outline:none;margin-bottom:8px; }
+.admin-select { background:#1a0a00;border:1.5px solid #004d26;border-radius:8px;color:#fff;padding:10px 12px;font-size:0.9rem;width:100%;outline:none;margin-bottom:8px; }
 .admin-code-display {
-  background:#0d1b2e;border:1.5px dashed #e8621a;border-radius:8px;
+  background:#1a0a00;border:1.5px dashed #CE1126;border-radius:8px;
   padding:12px;text-align:center;font-family:'Oswald',sans-serif;
-  font-size:1.4rem;font-weight:800;color:#e8621a;letter-spacing:4px;
+  font-size:1.4rem;font-weight:800;color:#CE1126;letter-spacing:4px;
   margin:10px 0;display:none;
 }
 </style>
@@ -243,14 +243,15 @@
       initFirebase();
     }
   </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 </head>
 <body>
 
 <!-- AUTH SCREEN -->
-<div id="authScreen" style="position:fixed;inset:0;z-index:99999;background:linear-gradient(160deg,#0a1628 0%,#1a2e4a 50%,#0d1b2e 100%);display:block;overflow-y:auto;-webkit-overflow-scrolling:touch;font-family:'Lato',sans-serif;padding:0">
+<div id="authScreen" style="position:fixed;inset:0;z-index:99999;background:linear-gradient(160deg,#CE1126 0%,#8B0010 25%,#4a0800 40%,#3d2000 55%,#004d26 80%,#009A44 100%);display:block;overflow-y:auto;-webkit-overflow-scrolling:touch;font-family:'Lato',sans-serif;padding:0">
   <div style="min-height:100%;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding:30px 20px 40px">
   <div style="text-align:center;margin-bottom:24px">
-    <div style="width:72px;height:72px;background:linear-gradient(135deg,#e8621a,#c0521a);border-radius:18px;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;box-shadow:0 8px 32px rgba(232,98,26,0.4);font-size:32px">📄</div>
+    <div style="width:72px;height:72px;background:linear-gradient(135deg,#CE1126,#a50e1f);border-radius:18px;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;box-shadow:0 8px 32px rgba(232,98,26,0.4);font-size:32px">📄</div>
     <h1 style="font-family:Oswald,sans-serif;font-size:1.8rem;font-weight:700;color:#fff;letter-spacing:3px;text-transform:uppercase">Reçus Pro</h1>
     <p style="color:rgba(255,255,255,0.5);font-size:0.82rem;letter-spacing:1px;margin-top:4px">Générateur de Factures Professionnel</p>
   </div>
@@ -258,7 +259,7 @@
   <div style="background:#fff;border-radius:20px;width:100%;max-width:400px;overflow:hidden;box-shadow:0 24px 64px rgba(0,0,0,0.5)">
     <!-- TABS -->
     <div style="display:grid;grid-template-columns:1fr 1fr">
-      <button id="tabLogin" onclick="switchTab('login')" style="padding:16px;text-align:center;cursor:pointer;font-family:Oswald,sans-serif;font-size:1rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;background:#fff;color:#1a2e4a;border:none;border-bottom:3px solid #e8621a;outline:none">Connexion</button>
+      <button id="tabLogin" onclick="switchTab('login')" style="padding:16px;text-align:center;cursor:pointer;font-family:Oswald,sans-serif;font-size:1rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;background:#fff;color:#004d26;border:none;border-bottom:3px solid #CE1126;outline:none">Connexion</button>
       <button id="tabRegister" onclick="switchTab('register')" style="padding:16px;text-align:center;cursor:pointer;font-family:Oswald,sans-serif;font-size:1rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;background:#f0f4fa;color:#94a3b8;border:none;border-bottom:3px solid transparent;outline:none">Inscription</button>
     </div>
 
@@ -267,20 +268,20 @@
       <div id="loginError" style="background:#fee2e2;color:#dc2626;border-radius:8px;padding:10px 14px;font-size:0.85rem;margin-bottom:14px;display:none;font-weight:600"></div>
       <div id="loginSuccess" style="background:#dcfce7;color:#16a34a;border-radius:8px;padding:10px 14px;font-size:0.85rem;margin-bottom:14px;display:none;font-weight:600"></div>
       <div style="margin-bottom:14px">
-        <label style="display:block;font-size:0.8rem;font-weight:700;color:#1a2e4a;text-transform:uppercase;margin-bottom:6px">Email</label>
+        <label style="display:block;font-size:0.8rem;font-weight:700;color:#004d26;text-transform:uppercase;margin-bottom:6px">Email</label>
         <input type="email" id="loginEmail" placeholder="votre@email.com" autocomplete="email" style="width:100%;border:1.5px solid #c8d4e8;border-radius:10px;padding:12px 14px;font-size:1rem;font-family:Lato,sans-serif;background:#f4f6fa;outline:none">
       </div>
       <div style="margin-bottom:8px">
-        <label style="display:block;font-size:0.8rem;font-weight:700;color:#1a2e4a;text-transform:uppercase;margin-bottom:6px">Mot de passe</label>
+        <label style="display:block;font-size:0.8rem;font-weight:700;color:#004d26;text-transform:uppercase;margin-bottom:6px">Mot de passe</label>
         <div style="position:relative">
           <input type="password" id="loginPwd" placeholder="••••••••" autocomplete="current-password" style="width:100%;border:1.5px solid #c8d4e8;border-radius:10px;padding:12px 14px;font-size:1rem;font-family:Lato,sans-serif;background:#f4f6fa;outline:none">
           <button onclick="togglePwd('loginPwd',this)" type="button" style="position:absolute;right:12px;top:50%;transform:translateY(-50%);background:none;border:none;cursor:pointer;font-size:18px">👁️</button>
         </div>
       </div>
-      <div style="text-align:right;margin-bottom:16px"><a onclick="forgotPassword()" style="font-size:0.8rem;color:#e8621a;cursor:pointer;font-weight:600">Mot de passe oublié ?</a></div>
-      <button onclick="doLogin()" style="width:100%;padding:14px;border:none;border-radius:10px;font-family:Oswald,sans-serif;font-size:1rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;cursor:pointer;background:linear-gradient(135deg,#e8621a,#c0521a);color:#fff;box-shadow:0 4px 20px rgba(232,98,26,0.35)">⚡ SE CONNECTER</button>
+      <div style="text-align:right;margin-bottom:16px"><a onclick="forgotPassword()" style="font-size:0.8rem;color:#CE1126;cursor:pointer;font-weight:600">Mot de passe oublié ?</a></div>
+      <button onclick="doLogin()" style="width:100%;padding:14px;border:none;border-radius:10px;font-family:Oswald,sans-serif;font-size:1rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;cursor:pointer;background:linear-gradient(135deg,#CE1126,#a50e1f);color:#fff;box-shadow:0 4px 20px rgba(232,98,26,0.35)">⚡ SE CONNECTER</button>
       <div style="display:flex;align-items:center;gap:10px;margin:16px 0"><div style="flex:1;height:1px;background:#e2e8f0"></div><span style="font-size:0.75rem;color:#94a3b8">ou</span><div style="flex:1;height:1px;background:#e2e8f0"></div></div>
-      <button onclick="doGuest()" style="width:100%;padding:12px;background:#f4f6fa;color:#1a2e4a;border:1.5px solid #e2e8f0;border-radius:10px;font-family:Oswald,sans-serif;font-size:0.9rem;font-weight:600;letter-spacing:1px;cursor:pointer">👤 Continuer sans compte</button>
+      <button onclick="doGuest()" style="width:100%;padding:12px;background:#f4f6fa;color:#004d26;border:1.5px solid #e2e8f0;border-radius:10px;font-family:Oswald,sans-serif;font-size:0.9rem;font-weight:600;letter-spacing:1px;cursor:pointer">👤 Continuer sans compte</button>
     </div>
 
     <!-- REGISTER -->
@@ -288,9 +289,9 @@
       <div id="registerError" style="background:#fee2e2;color:#dc2626;border-radius:8px;padding:10px 14px;font-size:0.85rem;margin-bottom:14px;display:none;font-weight:600"></div>
       <div id="registerSuccess" style="background:#dcfce7;color:#16a34a;border-radius:8px;padding:10px 14px;font-size:0.85rem;margin-bottom:14px;display:none;font-weight:600"></div>
       <div style="margin-bottom:14px">
-        <label style="display:block;font-size:0.8rem;font-weight:700;color:#1a2e4a;text-transform:uppercase;margin-bottom:6px">Choisissez un avatar</label>
+        <label style="display:block;font-size:0.8rem;font-weight:700;color:#004d26;text-transform:uppercase;margin-bottom:6px">Choisissez un avatar</label>
         <div style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap" id="avatarRow">
-          <button class="auth-avatar-btn selected" data-av="👤" onclick="pickAvatar(this)" style="width:44px;height:44px;border-radius:50%;border:2.5px solid #e8621a;cursor:pointer;font-size:22px;background:#fff3ed">👤</button>
+          <button class="auth-avatar-btn selected" data-av="👤" onclick="pickAvatar(this)" style="width:44px;height:44px;border-radius:50%;border:2.5px solid #CE1126;cursor:pointer;font-size:22px;background:#fff3ed">👤</button>
           <button class="auth-avatar-btn" data-av="👨‍💼" onclick="pickAvatar(this)" style="width:44px;height:44px;border-radius:50%;border:2.5px solid transparent;cursor:pointer;font-size:22px;background:#f4f6fa">👨‍💼</button>
           <button class="auth-avatar-btn" data-av="👩‍💼" onclick="pickAvatar(this)" style="width:44px;height:44px;border-radius:50%;border:2.5px solid transparent;cursor:pointer;font-size:22px;background:#f4f6fa">👩‍💼</button>
           <button class="auth-avatar-btn" data-av="🧑‍💻" onclick="pickAvatar(this)" style="width:44px;height:44px;border-radius:50%;border:2.5px solid transparent;cursor:pointer;font-size:22px;background:#f4f6fa">🧑‍💻</button>
@@ -299,15 +300,15 @@
         </div>
       </div>
       <div style="margin-bottom:14px">
-        <label style="display:block;font-size:0.8rem;font-weight:700;color:#1a2e4a;text-transform:uppercase;margin-bottom:6px">Nom complet</label>
+        <label style="display:block;font-size:0.8rem;font-weight:700;color:#004d26;text-transform:uppercase;margin-bottom:6px">Nom complet</label>
         <input type="text" id="regName" placeholder="Jean Dupont" style="width:100%;border:1.5px solid #c8d4e8;border-radius:10px;padding:12px 14px;font-size:1rem;font-family:Lato,sans-serif;background:#f4f6fa;outline:none">
       </div>
       <div style="margin-bottom:14px">
-        <label style="display:block;font-size:0.8rem;font-weight:700;color:#1a2e4a;text-transform:uppercase;margin-bottom:6px">Email</label>
+        <label style="display:block;font-size:0.8rem;font-weight:700;color:#004d26;text-transform:uppercase;margin-bottom:6px">Email</label>
         <input type="email" id="regEmail" placeholder="votre@email.com" style="width:100%;border:1.5px solid #c8d4e8;border-radius:10px;padding:12px 14px;font-size:1rem;font-family:Lato,sans-serif;background:#f4f6fa;outline:none">
       </div>
       <div style="margin-bottom:14px">
-        <label style="display:block;font-size:0.8rem;font-weight:700;color:#1a2e4a;text-transform:uppercase;margin-bottom:6px">Téléphone</label>
+        <label style="display:block;font-size:0.8rem;font-weight:700;color:#004d26;text-transform:uppercase;margin-bottom:6px">Téléphone</label>
         <input type="tel" id="regPhone" placeholder="+229 00 00 00 00" style="width:100%;border:1.5px solid #c8d4e8;border-radius:10px;padding:12px 14px;font-size:1rem;font-family:Lato,sans-serif;background:#f4f6fa;outline:none">
       </div>
 
@@ -319,27 +320,27 @@
       </div>
 
       <div style="margin-bottom:14px">
-        <label style="display:block;font-size:0.8rem;font-weight:700;color:#1a2e4a;text-transform:uppercase;margin-bottom:6px">Nom de l'entreprise</label>
+        <label style="display:block;font-size:0.8rem;font-weight:700;color:#004d26;text-transform:uppercase;margin-bottom:6px">Nom de l'entreprise</label>
         <input type="text" id="regBizName" placeholder="Ex: GLOBAL REFIT LTD" style="width:100%;border:1.5px solid #c8d4e8;border-radius:10px;padding:12px 14px;font-size:1rem;font-family:Lato,sans-serif;background:#f4f6fa;outline:none">
       </div>
 
       <div style="margin-bottom:14px">
-        <label style="display:block;font-size:0.8rem;font-weight:700;color:#1a2e4a;text-transform:uppercase;margin-bottom:6px">Slogan / Activité</label>
+        <label style="display:block;font-size:0.8rem;font-weight:700;color:#004d26;text-transform:uppercase;margin-bottom:6px">Slogan / Activité</label>
         <input type="text" id="regBizSub" placeholder="Ex: Dealers in general merchandise" style="width:100%;border:1.5px solid #c8d4e8;border-radius:10px;padding:12px 14px;font-size:1rem;font-family:Lato,sans-serif;background:#f4f6fa;outline:none">
       </div>
 
       <div style="margin-bottom:14px">
-        <label style="display:block;font-size:0.8rem;font-weight:700;color:#1a2e4a;text-transform:uppercase;margin-bottom:6px">Téléphone entreprise</label>
+        <label style="display:block;font-size:0.8rem;font-weight:700;color:#004d26;text-transform:uppercase;margin-bottom:6px">Téléphone entreprise</label>
         <input type="tel" id="regBizPhone" placeholder="Ex: 08028386659" style="width:100%;border:1.5px solid #c8d4e8;border-radius:10px;padding:12px 14px;font-size:1rem;font-family:Lato,sans-serif;background:#f4f6fa;outline:none">
       </div>
 
       <div style="margin-bottom:14px">
-        <label style="display:block;font-size:0.8rem;font-weight:700;color:#1a2e4a;text-transform:uppercase;margin-bottom:6px">Adresse entreprise</label>
+        <label style="display:block;font-size:0.8rem;font-weight:700;color:#004d26;text-transform:uppercase;margin-bottom:6px">Adresse entreprise</label>
         <input type="text" id="regBizAddr" placeholder="Ex: 19 Rue Principale, Lagos" style="width:100%;border:1.5px solid #c8d4e8;border-radius:10px;padding:12px 14px;font-size:1rem;font-family:Lato,sans-serif;background:#f4f6fa;outline:none">
       </div>
 
       <div style="margin-bottom:14px">
-        <label style="display:block;font-size:0.8rem;font-weight:700;color:#1a2e4a;text-transform:uppercase;margin-bottom:6px">Logo entreprise</label>
+        <label style="display:block;font-size:0.8rem;font-weight:700;color:#004d26;text-transform:uppercase;margin-bottom:6px">Logo entreprise</label>
         <div id="regLogoArea" onclick="document.getElementById('regLogoInput').click()"
           style="border:2px dashed #c8d4e8;border-radius:10px;padding:14px;text-align:center;cursor:pointer;background:#f4f6fa">
           <div id="regLogoPreview" style="display:none;position:relative;justify-content:center">
@@ -356,7 +357,7 @@
       </div>
 
       <div style="margin-bottom:14px">
-        <label style="display:block;font-size:0.8rem;font-weight:700;color:#1a2e4a;text-transform:uppercase;margin-bottom:6px">Mot de passe</label>
+        <label style="display:block;font-size:0.8rem;font-weight:700;color:#004d26;text-transform:uppercase;margin-bottom:6px">Mot de passe</label>
         <div style="position:relative">
           <input type="password" id="regPwd" placeholder="••••••••" oninput="checkPwdStrength(this)" style="width:100%;border:1.5px solid #c8d4e8;border-radius:10px;padding:12px 14px;font-size:1rem;font-family:Lato,sans-serif;background:#f4f6fa;outline:none">
           <button onclick="togglePwd('regPwd',this)" type="button" style="position:absolute;right:12px;top:50%;transform:translateY(-50%);background:none;border:none;cursor:pointer;font-size:18px">👁️</button>
@@ -370,11 +371,11 @@
         <div id="pwdHint" style="font-size:0.72rem;color:#94a3b8;margin-top:3px">Au moins 6 caractères</div>
       </div>
       <div style="margin-bottom:16px">
-        <label style="display:block;font-size:0.8rem;font-weight:700;color:#1a2e4a;text-transform:uppercase;margin-bottom:6px">Confirmer le mot de passe</label>
+        <label style="display:block;font-size:0.8rem;font-weight:700;color:#004d26;text-transform:uppercase;margin-bottom:6px">Confirmer le mot de passe</label>
         <input type="password" id="regPwd2" placeholder="••••••••" style="width:100%;border:1.5px solid #c8d4e8;border-radius:10px;padding:12px 14px;font-size:1rem;font-family:Lato,sans-serif;background:#f4f6fa;outline:none">
       </div>
-      <button onclick="doRegister()" style="width:100%;padding:14px;border:none;border-radius:10px;font-family:Oswald,sans-serif;font-size:1rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;cursor:pointer;background:linear-gradient(135deg,#e8621a,#c0521a);color:#fff">🚀 CRÉER MON COMPTE</button>
-      <p style="font-size:0.75rem;color:#94a3b8;text-align:center;margin-top:12px">En vous inscrivant, vous acceptez nos <a href="#" style="color:#1a2e4a;font-weight:600">Conditions d'utilisation</a></p>
+      <button onclick="doRegister()" style="width:100%;padding:14px;border:none;border-radius:10px;font-family:Oswald,sans-serif;font-size:1rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;cursor:pointer;background:linear-gradient(135deg,#CE1126,#a50e1f);color:#fff">🚀 CRÉER MON COMPTE</button>
+      <p style="font-size:0.75rem;color:#94a3b8;text-align:center;margin-top:12px">En vous inscrivant, vous acceptez nos <a href="#" style="color:#004d26;font-weight:600">Conditions d'utilisation</a></p>
     </div>
   </div>
   <div style="margin-top:16px;text-align:center;color:rgba(255,255,255,0.3);font-size:0.72rem">© 2026 Reçus Pro · Tous droits réservés</div>
@@ -382,10 +383,10 @@
 </div>
 
 <!-- SUBSCRIPTION SCREEN -->
-<div id="subScreen" style="position:fixed;inset:0;z-index:99998;background:linear-gradient(160deg,#0a1628 0%,#1a2e4a 60%,#0d1b2e 100%);display:none;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch">
+<div id="subScreen" style="position:fixed;inset:0;z-index:99998;background:linear-gradient(160deg,#001a09 0%,#004d26 60%,#1a0a00 100%);display:none;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch">
   <div style="min-height:100%;display:flex;flex-direction:column;align-items:center;padding:30px 20px 60px;width:100%">
   <div style="text-align:center;margin-bottom:20px">
-    <div style="width:64px;height:64px;background:linear-gradient(135deg,#e8621a,#c0521a);border-radius:16px;display:flex;align-items:center;justify-content:center;margin:0 auto 10px;font-size:28px">💎</div>
+    <div style="width:64px;height:64px;background:linear-gradient(135deg,#CE1126,#a50e1f);border-radius:16px;display:flex;align-items:center;justify-content:center;margin:0 auto 10px;font-size:28px">💎</div>
     <h1 style="font-family:Oswald,sans-serif;font-size:1.6rem;font-weight:700;color:#fff;letter-spacing:2px">REÇUS PRO</h1>
     <p style="color:rgba(255,255,255,0.5);font-size:0.8rem;margin-top:4px">Choisissez votre plan</p>
   </div>
@@ -478,9 +479,13 @@
 <!-- APP ROOT -->
 <div id="appRoot" style="display:none">
 
-<div class="app-hero">
-  <h1>Générateur de <span>Reçus</span> Pro</h1>
-  <p>Choisissez un modèle · Remplissez · Imprimez</p>
+<div class="app-hero" style="background:none;padding:0;margin-bottom:20px">
+  <div style="background:linear-gradient(135deg,#CE1126 0%,#8B0000 35%,#1a0a00 65%,#003d1a 100%);padding:18px 16px 14px;border-radius:10px">
+    <h1 style="font-family:'Oswald',sans-serif;font-size:2rem;font-weight:800;color:#fff;letter-spacing:4px;text-transform:uppercase;margin:0 0 4px">
+      🧾 Reçus <span style="color:#FCD116">Pro</span>
+    </h1>
+    <p style="color:rgba(255,255,255,0.7);font-size:0.8rem;letter-spacing:2px;margin:0">Choisissez un modèle · Remplissez · Imprimez</p>
+  </div>
 </div>
 
 <!-- TEMPLATE PICKER -->
@@ -630,7 +635,8 @@
         <textarea id="invNote" rows="2" placeholder="Ex: Marchandise reçue en bon état. Pas de remboursement." oninput="render()"></textarea></div>
       <div><label>Autre information</label>
         <textarea id="otherInfo" rows="2" placeholder="Informations supplémentaires..." oninput="render()"></textarea></div>
-      <button class="btn-print" onclick="window.print()">🖨️ IMPRIMER / ENREGISTRER PDF</button>
+      <button class="btn-print" onclick="addToHistory();window.print()">🖨️ IMPRIMER / ENREGISTRER PDF</button>
+      <button class="btn-print no-print" onclick="showHistory()" style="background:linear-gradient(135deg,#004d26,#1a0a00);border:1px solid #006633;margin-top:8px">📋 MES REÇUS</button>
 
       <button class="btn-whatsapp" id="btnWhatsApp" onclick="shareWhatsApp()">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
@@ -654,32 +660,32 @@
 <script>
 // ─── TEMPLATES CONFIG ────────────────────────────────────
 const TEMPLATES = [
-  { name:'Global Refit',  emoji:'🔵', bg:'#1a2e4a', accent:'#e8621a',   thumb:'#1a2e4a' },
-  { name:'Zanflus',       emoji:'🟢', bg:'#0d9488', accent:'#e8621a',   thumb:'#0d9488' },
+  { name:'Global Refit',  emoji:'🔵', bg:'#004d26', accent:'#CE1126',   thumb:'#004d26' },
+  { name:'Zanflus',       emoji:'🟢', bg:'#0d9488', accent:'#CE1126',   thumb:'#0d9488' },
   { name:'Alpha Homes',   emoji:'🔷', bg:'#1a5cbe', accent:'#f0b429',   thumb:'#1a5cbe' },
   { name:'Elite Stores',  emoji:'🟣', bg:'#6b21a8', accent:'#000000',   thumb:'#6b21a8' },
-  { name:'Shop Wings',    emoji:'🛍️', bg:'#1a2e4a', accent:'#e8621a',   thumb:'#1e3a6e' },
+  { name:'Shop Wings',    emoji:'🛍️', bg:'#004d26', accent:'#CE1126',   thumb:'#1e3a6e' },
   { name:'Blue Sales',    emoji:'📘', bg:'#1d4ed8', accent:'#f0b429',   thumb:'#1d4ed8' },
-  { name:'Wisdom Book',   emoji:'📚', bg:'#1a5cbe', accent:'#e8621a',   thumb:'#1a3560' },
-  { name:'Classic Navy',  emoji:'⚓', bg:'#0f2044', accent:'#e8621a',   thumb:'#0f2044' },
+  { name:'Wisdom Book',   emoji:'📚', bg:'#1a5cbe', accent:'#CE1126',   thumb:'#1a3560' },
+  { name:'Classic Navy',  emoji:'⚓', bg:'#0f2044', accent:'#CE1126',   thumb:'#0f2044' },
   { name:'Prestige Gold', emoji:'✨', bg:'#7c3d07', accent:'#f0b429',   thumb:'#7c3d07' },
   { name:'Diag Navy',     emoji:'🟦', bg:'#1a237e', accent:'#ffffff',   thumb:'#1a237e' },
-  { name:'Arabic Blue',   emoji:'🕌', bg:'#1a2e8a', accent:'#e8621a',   thumb:'#2233aa' },
-  { name:'Al-Nasr',       emoji:'🏛️', bg:'#c9a84c', accent:'#1a2e4a',   thumb:'#7c6420' },
+  { name:'Arabic Blue',   emoji:'🕌', bg:'#1a2e8a', accent:'#CE1126',   thumb:'#2233aa' },
+  { name:'Al-Nasr',       emoji:'🏛️', bg:'#c9a84c', accent:'#004d26',   thumb:'#7c6420' },
   { name:'Green Arabic',  emoji:'🟩', bg:'#2d7a2d', accent:'#111111',   thumb:'#2d7a2d' },
-  { name:'Cyan Orange',   emoji:'🔶', bg:'#0097c4', accent:'#e8621a',   thumb:'#0097c4' },
+  { name:'Cyan Orange',   emoji:'🔶', bg:'#0097c4', accent:'#CE1126',   thumb:'#0097c4' },
   { name:'Hasson Wave',   emoji:'👘', bg:'#1a237e', accent:'#e8000d',   thumb:'#1a237e' },
   { name:'Hasson Red',    emoji:'🔴', bg:'#e8000d', accent:'#1a237e',   thumb:'#c00010' },
-  { name:'Noor Mach',     emoji:'⚙️', bg:'#1a2e4a', accent:'#f0a500',   thumb:'#1a2e4a' },
-  { name:'Ayman Store',   emoji:'📱', bg:'#1a5cbe', accent:'#e8621a',   thumb:'#1a5cbe' },
+  { name:'Noor Mach',     emoji:'⚙️', bg:'#004d26', accent:'#f0a500',   thumb:'#004d26' },
+  { name:'Ayman Store',   emoji:'📱', bg:'#1a5cbe', accent:'#CE1126',   thumb:'#1a5cbe' },
   { name:'Haytham Fon',   emoji:'📞', bg:'#1a2744', accent:'#ffffff',   thumb:'#1a2744' },
   { name:'DNG Supply',    emoji:'🏗️', bg:'#1a5cbe', accent:'#f0b429',   thumb:'#134a8e' },
   { name:'Nour Bayan',    emoji:'📗', bg:'#1a6b3a', accent:'#c9a84c',   thumb:'#1a6b3a' },
   { name:'Corp Blue',     emoji:'🏢', bg:'#1a3a6b', accent:'#4a9fd4',   thumb:'#1a3a6b' },
-  { name:'Modern Inv',    emoji:'💼', bg:'#1a2e4a', accent:'#e8621a',   thumb:'#2d3e6b' },
+  { name:'Modern Inv',    emoji:'💼', bg:'#004d26', accent:'#CE1126',   thumb:'#2d3e6b' },
   { name:'Fadel Asdi',    emoji:'🔵', bg:'#1a237e', accent:'#e8000d',   thumb:'#1a237e' },
   { name:'Corp Pro',      emoji:'🏛️', bg:'#1a3a6b', accent:'#4a9fd4',   thumb:'#0d2a52' },
-  { name:'Green Valley',  emoji:'🌿', bg:'#1a5c2a', accent:'#e8621a',   thumb:'#1a5c2a' },
+  { name:'Green Valley',  emoji:'🌿', bg:'#1a5c2a', accent:'#CE1126',   thumb:'#1a5c2a' },
 ];
 
 // ─── STATE ───────────────────────────────────────────────
@@ -788,7 +794,7 @@ function logoHTML(biz,size,radius){
   size=size||48; radius=radius||8;
   if(biz.logo) return '<img src="'+biz.logo+'" style="width:'+size+'px;height:'+size+'px;object-fit:contain;border-radius:'+radius+'px;display:block">';
   const initial=(biz.name.replace(/[^a-zA-Z\u0600-\u06FF]/g,'')||'E')[0].toUpperCase();
-  return '<div style="width:'+size+'px;height:'+size+'px;border-radius:'+radius+'px;background:#1a2e4a;display:flex;align-items:center;justify-content:center;font-family:Oswald,sans-serif;font-size:'+Math.round(size*0.45)+'px;font-weight:900;color:#fff">'+initial+'</div>';
+  return '<div style="width:'+size+'px;height:'+size+'px;border-radius:'+radius+'px;background:#004d26;display:flex;align-items:center;justify-content:center;font-family:Oswald,sans-serif;font-size:'+Math.round(size*0.45)+'px;font-weight:900;color:#fff">'+initial+'</div>';
 }
 
 function sigBlock(labels){
@@ -856,24 +862,24 @@ function render(){
 function renderGlobalRefit(t,biz,cli,meta,totals,words){
 return `<div class="inv" style="padding:0">
 <!-- header -->
-<div style="padding:18px 24px 12px;border-bottom:2px solid #1a2e4a;display:flex;align-items:flex-start;justify-content:space-between">
+<div style="padding:18px 24px 12px;border-bottom:2px solid #004d26;display:flex;align-items:flex-start;justify-content:space-between">
 <div style="display:flex;align-items:center;gap:14px">
 <div style="flex-shrink:0">${logoHTML(biz,54,10)}</div>
 <div>
 <div style="font-family:Oswald,sans-serif;font-size:1.35rem;font-weight:900;line-height:1.1">
-<span style="color:#1a2e4a">${biz.name.split(' ').slice(0,-1).join(' ')}</span>
+<span style="color:#004d26">${biz.name.split(' ').slice(0,-1).join(' ')}</span>
 <span style="color:#dc2626"> ${biz.name.split(' ').slice(-1)[0]||''}</span>
 </div>
 <div style="font-size:0.90rem;color:#475569;margin-top:2px"><span style="${biz.subStyle}">${biz.sub}</span></div>
 </div>
 </div>
 <div style="text-align:right;font-size:0.93rem;color:#475569;line-height:1.8">
-<div style="font-weight:700;color:#1a2e4a">📞 ${biz.phone}</div>
+<div style="font-weight:700;color:#004d26">📞 ${biz.phone}</div>
 ${biz.email!=='—'?`<div>✉ ${biz.email}</div>`:''}
 </div>
 </div>
 <!-- sub-header -->
-<div style="display:flex;align-items:center;justify-content:space-between;padding:10px 24px;background:#f8fafc;border-bottom:2px solid #1a2e4a">
+<div style="display:flex;align-items:center;justify-content:space-between;padding:10px 24px;background:#f8fafc;border-bottom:2px solid #004d26">
 <div style="font-size:0.93rem;color:#475569">
 <div style="color:#dc2626;font-weight:700;font-size:0.7rem;letter-spacing:1px;text-transform:uppercase">Adresse:</div>
 ${biz.addr}
@@ -881,19 +887,19 @@ ${biz.addr}
 <div style="font-family:Oswald,sans-serif;font-size:1.3rem;font-weight:900;color:#dc2626;letter-spacing:3px">${meta.docType}</div>
 <div style="text-align:right;font-size:0.93rem">
 <div style="color:#dc2626;font-weight:700;font-size:0.7rem;letter-spacing:1px;text-transform:uppercase">Contact:</div>
-<div style="font-weight:700;color:#1a2e4a">${biz.phone}</div>
+<div style="font-weight:700;color:#004d26">${biz.phone}</div>
 </div>
 </div>
 <!-- client row -->
 <div style="padding:14px 24px;display:grid;grid-template-columns:1fr auto;gap:16px;border-bottom:1px solid #e2e8f0">
 <div>
 <div style="display:flex;gap:8px;margin-bottom:8px;align-items:baseline">
-<span style="color:#1a2e4a;font-weight:700;font-size:0.96rem">Nom :</span>
-<span style="flex:1;border-bottom:1.5px solid #1a2e4a;padding-bottom:1px;font-size:1.02rem"><span style="${cli.nameStyle}">${cli.name}</span></span>
+<span style="color:#004d26;font-weight:700;font-size:0.96rem">Nom :</span>
+<span style="flex:1;border-bottom:1.5px solid #004d26;padding-bottom:1px;font-size:1.02rem"><span style="${cli.nameStyle}">${cli.name}</span></span>
 </div>
 <div style="display:flex;gap:8px;align-items:baseline">
-<span style="color:#1a2e4a;font-weight:700;font-size:0.96rem">Adresse :</span>
-<span style="flex:1;border-bottom:1.5px solid #1a2e4a;padding-bottom:1px;font-size:1.02rem">${cli.addr}</span>
+<span style="color:#004d26;font-weight:700;font-size:0.96rem">Adresse :</span>
+<span style="flex:1;border-bottom:1.5px solid #004d26;padding-bottom:1px;font-size:1.02rem">${cli.addr}</span>
 </div>
 </div>
 <div style="text-align:right;font-size:0.96rem">
@@ -903,9 +909,9 @@ ${biz.addr}
 </div>
 <!-- table -->
 <div style="padding:0 24px;position:relative">
-<div class="watermark" style="color:#1a2e4a"><span style="${biz.nameStyle}">${biz.name}</span></div>
+<div class="watermark" style="color:#004d26"><span style="${biz.nameStyle}">${biz.name}</span></div>
 <table class="inv-tbl">
-<thead><tr style="background:#1a2e4a">
+<thead><tr style="background:#004d26">
 <th style="width:44px;text-align:center">N°</th>
 <th style="width:80px">Qualité</th>
 <th>Description</th>
@@ -936,7 +942,7 @@ ${Array(Math.max(0,8-items.filter(it=>it.desc||it.qté).length)).fill(`<tr><td s
 <span style="color:#dc2626;font-weight:700">Montant en lettres : </span>
 <span style="border-bottom:1px solid #334155;display:inline-block;min-width:200px;padding-bottom:2px;font-style:italic">${words.charAt(0).toUpperCase()+words.slice(1)} francs</span>
 </div>
-<div style="background:#1a2e4a;color:#fff;padding:10px 16px;border-radius:6px;text-align:center;font-size:1.0rem;font-weight:700;letter-spacing:1px">
+<div style="background:#004d26;color:#fff;padding:10px 16px;border-radius:6px;text-align:center;font-size:1.0rem;font-weight:700;letter-spacing:1px">
 Office<br>Signature<br>
 <div style="margin-top:18px;border-top:1px solid rgba(255,255,255,0.3);padding-top:4px;opacity:0.5">_______</div>
 </div>
@@ -965,7 +971,7 @@ return `<div class="inv">
 <!-- doc type + date -->
 <div style="padding:12px 24px;display:flex;align-items:center;gap:16px">
 <div style="font-size:0.96rem"><span style="font-weight:700">DATE:</span> ${meta.date}</div>
-<div style="background:#e8621a;color:#fff;padding:6px 18px;border-radius:20px;font-family:Oswald,sans-serif;font-weight:700;font-size:1.05rem;letter-spacing:2px">${meta.docType}</div>
+<div style="background:#CE1126;color:#fff;padding:6px 18px;border-radius:20px;font-family:Oswald,sans-serif;font-weight:700;font-size:1.05rem;letter-spacing:2px">${meta.docType}</div>
 </div>
 <!-- received from / amount -->
 <div style="padding:0 24px 10px">
@@ -1012,7 +1018,7 @@ ${meta.note?`<div style="padding:4px 24px;font-size:0.87rem;color:#64748b;font-s
 <!-- wave footer -->
 <div style="position:relative;height:60px;overflow:hidden;margin-top:4px">
 <svg viewBox="0 0 400 60" style="position:absolute;bottom:0;width:100%" xmlns="http://www.w3.org/2000/svg">
-<path d="M0,30 Q100,0 200,30 Q300,60 400,20 L400,60 L0,60 Z" fill="#e8621a" opacity="0.8"/>
+<path d="M0,30 Q100,0 200,30 Q300,60 400,20 L400,60 L0,60 Z" fill="#CE1126" opacity="0.8"/>
 <path d="M0,40 Q100,10 200,40 Q300,70 400,30 L400,60 L0,60 Z" fill="#0d9488"/>
 <path d="M0,50 Q100,30 200,50 Q300,70 400,45 L400,60 L0,60 Z" fill="#fff" opacity="0.3"/>
 </svg>
@@ -1178,20 +1184,20 @@ ${meta.note?`<div style="padding:4px 24px 8px;text-align:center;font-size:1.0rem
 
 function renderShopWings(t,biz,cli,meta,totals,words){
 return `<div class="inv">
-<div style="padding:16px 24px 12px;display:flex;justify-content:space-between;align-items:flex-start;border-bottom:2px solid #1a2e4a">
+<div style="padding:16px 24px 12px;display:flex;justify-content:space-between;align-items:flex-start;border-bottom:2px solid #004d26">
 <div style="display:flex;align-items:center;gap:12px">
 <div style="font-size:32px">🛍️</div>
 <div>
-<div style="font-family:Oswald,sans-serif;font-size:1.3rem;font-weight:800;color:#1a2e4a"><span style="${biz.nameStyle}">${biz.name}</span></div>
+<div style="font-family:Oswald,sans-serif;font-size:1.3rem;font-weight:800;color:#004d26"><span style="${biz.nameStyle}">${biz.name}</span></div>
 <div style="font-size:0.7rem;color:#475569"><span style="${biz.subStyle}">${biz.sub}</span></div>
 </div>
 </div>
-<div style="background:#1a2e4a;color:#fff;padding:8px 18px;border-radius:4px;font-family:Oswald,sans-serif;font-weight:700;letter-spacing:3px;font-size:1rem">${meta.docType}</div>
+<div style="background:#004d26;color:#fff;padding:8px 18px;border-radius:4px;font-family:Oswald,sans-serif;font-weight:700;letter-spacing:3px;font-size:1rem">${meta.docType}</div>
 </div>
 <!-- client details box -->
 <div style="padding:12px 24px;display:grid;grid-template-columns:1fr auto;gap:16px">
-<div style="background:#f0f4fa;border-left:3px solid #1a2e4a;padding:10px 14px;border-radius:0 6px 6px 0">
-<div style="font-family:Oswald,sans-serif;font-size:1.0rem;font-weight:600;letter-spacing:2px;color:#1a2e4a;background:#1a2e4a;color:#fff;padding:3px 10px;border-radius:3px;display:inline-block;margin-bottom:8px">DÉTAILS CLIENT</div>
+<div style="background:#f0f4fa;border-left:3px solid #004d26;padding:10px 14px;border-radius:0 6px 6px 0">
+<div style="font-family:Oswald,sans-serif;font-size:1.0rem;font-weight:600;letter-spacing:2px;color:#004d26;background:#004d26;color:#fff;padding:3px 10px;border-radius:3px;display:inline-block;margin-bottom:8px">DÉTAILS CLIENT</div>
 <div style="font-size:1.0rem;line-height:2">${cli.name} ${cli.phone!=='—'?'| '+cli.phone:''}</div>
 ${cli.addr!=='—'?`<div style="font-size:0.8rem;color:#475569">${cli.addr}</div>`:''}
 </div>
@@ -1203,8 +1209,8 @@ ${cli.addr!=='—'?`<div style="font-size:0.8rem;color:#475569">${cli.addr}</div
 </div>
 <!-- table -->
 <div style="padding:0 24px">
-<table class="inv-tbl" style="border:1.5px solid #1a2e4a">
-<thead><tr style="background:#1a2e4a">
+<table class="inv-tbl" style="border:1.5px solid #004d26">
+<thead><tr style="background:#004d26">
 <th style="width:44px;text-align:center">NO.</th>
 <th>DÉSIGNATION</th>
 <th style="width:60px;text-align:center">PIÈCES</th>
@@ -1227,12 +1233,12 @@ ${Array(Math.max(0,7-items.filter(it=>it.desc||it.qté).length)).fill(`<tr><td s
 <table style="font-size:0.98rem;border-collapse:collapse">
 <tr><td style="padding:4px 12px;text-align:right;font-weight:700">Sous-total</td><td style="padding:4px 14px;text-align:right;border-left:1px solid #e2e8f0">${fmt(totals.sub)}</td></tr>
 ${totals.tax>0?`<tr><td style="padding:4px 12px;text-align:right;font-weight:700">Total Taxes</td><td style="padding:4px 14px;text-align:right;border-left:1px solid #e2e8f0">${fmt(totals.tax)}</td></tr>`:''}
-<tr style="background:#1a2e4a;color:#fff"><td style="padding:8px 12px;text-align:right;font-weight:800;font-family:Oswald,sans-serif">TOTAUX</td><td style="padding:8px 14px;text-align:right;font-weight:800;font-size:1.05rem">${fmt(totals.grand)}</td></tr>
+<tr style="background:#004d26;color:#fff"><td style="padding:8px 12px;text-align:right;font-weight:800;font-family:Oswald,sans-serif">TOTAUX</td><td style="padding:8px 14px;text-align:right;font-weight:800;font-size:1.05rem">${fmt(totals.grand)}</td></tr>
 </table>
 </div>
 ${meta.other?`<div style="padding:6px 24px;font-size:0.93rem"><span style="font-weight:700">AUTRES INFORMATIONS :</span> ${meta.other}</div>`:''}
 <!-- footer bar -->
-<div style="background:#1a2e4a;margin-top:8px;padding:10px 24px;display:flex;justify-content:space-between;align-items:center">
+<div style="background:#004d26;margin-top:8px;padding:10px 24px;display:flex;justify-content:space-between;align-items:center">
 <div style="color:#fff;font-family:Oswald,sans-serif;font-size:0.8rem;font-weight:600;letter-spacing:1px">MERCI POUR VOTRE CONFIANCE !</div>
 <div style="color:rgba(255,255,255,0.6);font-size:0.7rem">${biz.web||biz.email}</div>
 </div>
@@ -1400,7 +1406,7 @@ ${biz.email!=='—'?`<div>✉ ${biz.email}</div>`:''}
 </div>
 </div>
 <!-- orange strip -->
-<div style="background:#e8621a;height:5px"></div>
+<div style="background:#CE1126;height:5px"></div>
 <div style="padding:16px 28px;display:grid;grid-template-columns:1fr 1fr;gap:16px;border-bottom:1px solid #e2e8f0">
 <div>
 <div style="font-size:0.96rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#0f2044;margin-bottom:4px">${meta.docType}</div>
@@ -1454,7 +1460,7 @@ TOTAL: ${fmt(totals.grand)}
 <div style="padding:14px 28px;border-top:1px dashed #e2e8f0">${sigBlock(['Signature Client','Caissier','Signature Autorisée'])}</div>
 <div style="background:#0f2044;padding:10px 28px;display:flex;justify-content:space-between;align-items:center">
 <div style="color:rgba(255,255,255,0.6);font-size:1.0rem"><span style="${biz.addrStyle}">${biz.addr}</span></div>
-<div style="color:#e8621a;font-family:Oswald,sans-serif;font-size:0.93rem;font-weight:600;letter-spacing:1px">Merci pour votre confiance</div>
+<div style="color:#CE1126;font-family:Oswald,sans-serif;font-size:0.93rem;font-weight:600;letter-spacing:1px">Merci pour votre confiance</div>
 </div>
 </div>`;
 }
@@ -1552,7 +1558,7 @@ function handleRegLogo(input) {
     if (img) img.src = regLogoDataURL;
     if (prev) { prev.style.display = 'flex'; }
     if (ph) ph.style.display = 'none';
-    if (area) area.style.borderColor = '#e8621a';
+    if (area) area.style.borderColor = '#CE1126';
   };
   reader.readAsDataURL(file);
 }
@@ -1872,6 +1878,58 @@ function fbAddLog(msg) {
   if (!fbDB) return;
   try { fbDB.ref('logs').push({ msg:msg, date:Date.now() }); } catch(e) {}
 }
+/* ======= FIREBASE HISTORIQUE ======= */
+function fbSaveHistory(entries) {
+  if (!fbDB || !currentUser || !currentUser.email || currentUser.guest) return;
+  var key = currentUser.email.replace(/[.#$\[\]]/g, '_');
+  // On sauvegarde sans miniatures sur Firebase (trop lourdes), miniatures restent en local
+  var light = entries.map(function(e) {
+    var copy = {}; for (var k in e) copy[k] = e[k];
+    delete copy.thumbnail;
+    return copy;
+  });
+  try { fbDB.ref('history/'+key).set(light); } catch(e) { console.warn('fb save history', e); }
+}
+
+function fbLoadHistory(callback) {
+  if (!fbDB || !currentUser || !currentUser.email || currentUser.guest) { callback(null); return; }
+  var key = currentUser.email.replace(/[.#$\[\]]/g, '_');
+  try {
+    fbDB.ref('history/'+key).once('value').then(function(snap) {
+      var data = snap.val();
+      callback(Array.isArray(data) ? data : null);
+    }).catch(function() { callback(null); });
+  } catch(e) { callback(null); }
+}
+
+function mergeHistoryWithFirebase(callback) {
+  fbLoadHistory(function(fbEntries) {
+    var local = getHistory();
+    if (!fbEntries || !fbEntries.length) {
+      // Rien sur Firebase → on push le local vers Firebase
+      if (local.length) fbSaveHistory(local);
+      callback(local); return;
+    }
+    // Fusionner local + Firebase par id unique
+    var map = {};
+    fbEntries.forEach(function(e) { if (e && e.id) map[e.id] = e; });
+    // Les entrées locales ont les miniatures → on les garde
+    local.forEach(function(e) {
+      if (!e || !e.id) return;
+      if (map[e.id]) {
+        // Combiner: données Firebase + miniature locale
+        map[e.id].thumbnail = e.thumbnail || map[e.id].thumbnail || null;
+      } else {
+        map[e.id] = e;
+      }
+    });
+    var merged = Object.values(map).sort(function(a,b){ return (b.id||0)-(a.id||0); });
+    if (merged.length > 2000) merged = merged.slice(0,2000);
+    saveHistory(merged);       // sauvegarder local (avec miniatures)
+    fbSaveHistory(merged);     // sauvegarder Firebase (sans miniatures)
+    callback(merged);
+  });
+}
 function saveUsers(u) {
 try { localStorage.setItem('rp_users', JSON.stringify(u)); } catch(e){}
 }
@@ -2016,7 +2074,7 @@ function addSubscribeBtn() {
     'bottom:80px',
     'right:16px',
     'z-index:99990',
-    'background:linear-gradient(135deg,#f59e0b,#d97706)',
+    'background:linear-gradient(135deg,#FCD116,#e0b800)',
     'color:#fff',
     'border:none',
     'border-radius:30px',
@@ -2041,11 +2099,10 @@ function addLogoutBtn() {
   var bar = document.createElement('div');
   bar.id = 'logoutBtn';
   bar.className = 'no-print';
-  bar.style.cssText = 'display:flex;gap:8px;justify-content:center;padding:10px 16px;background:#0d1b2e;border-bottom:1px solid #1a2e4a';
-  // Logout button
+  bar.style.cssText = 'display:flex;gap:8px;justify-content:center;padding:10px 16px;background:#1a0a00;border-bottom:1px solid #004d26';
   var btnOut = document.createElement('button');
   btnOut.innerHTML = '🚪 Déconnexion';
-  btnOut.style.cssText = 'background:#1a2e4a;color:#fff;border:1px solid #2d4a6e;border-radius:8px;padding:9px 16px;font-family:Oswald,sans-serif;font-size:0.85rem;font-weight:700;letter-spacing:1px;cursor:pointer;flex:1;max-width:180px';
+  btnOut.style.cssText = 'background:#004d26;color:#fff;border:1px solid #006633;border-radius:8px;padding:9px 16px;font-family:Oswald,sans-serif;font-size:0.85rem;font-weight:700;letter-spacing:1px;cursor:pointer;flex:1;max-width:220px';
   btnOut.onclick = function() {
     currentUser = null;
     var app = document.getElementById('appRoot');
@@ -2060,21 +2117,28 @@ function addLogoutBtn() {
     if (lp) lp.value = '';
     if (typeof switchTab === 'function') switchTab('login');
     if (bar2) bar2.remove();
+    if (ab) ab.remove();
   };
-  // Admin button
-  var btnAdmin = document.createElement('button');
-  btnAdmin.id = 'adminBtn';
-  btnAdmin.innerHTML = '🛡️ Admin';
-  btnAdmin.style.cssText = 'background:linear-gradient(135deg,#e8621a,#c0521a);color:#fff;border:none;border-radius:8px;padding:9px 16px;font-family:Oswald,sans-serif;font-size:0.85rem;font-weight:700;letter-spacing:1px;cursor:pointer;flex:1;max-width:180px';
-  btnAdmin.onclick = function() { showAdmin(); };
   bar.appendChild(btnOut);
-  bar.appendChild(btnAdmin);
   var appRoot = document.getElementById('appRoot');
   if (appRoot) appRoot.insertBefore(bar, appRoot.firstChild);
 }
 
 function enterApp(user) {
 currentUser = user;
+// Charger l'abonnement spécifique à cet utilisateur
+if (currentUser && currentUser.email && !currentUser.guest) {
+  try {
+    var userSubKey = 'rp_sub_' + currentUser.email;
+    var userSub = JSON.parse(localStorage.getItem(userSubKey) || 'null');
+    // Ne prendre que si actif et non expiré
+    if (userSub && userSub.active && Date.now() < userSub.expiry) {
+      currentUser.subscription = userSub;
+    } else {
+      currentUser.subscription = null; // Pas d'abonnement valide pour cet utilisateur
+    }
+  } catch(e) {}
+}
 var auth = document.getElementById('authScreen');
 var app = document.getElementById('appRoot');
 if (auth) { auth.style.display = 'none'; }
@@ -2117,7 +2181,7 @@ setTimeout(function() { addSubscribeBtn(); }, 800);
 
 function showWelcomeBadge(user) {
 const badge = document.createElement('div');
-badge.style.cssText = 'position:fixed;top:16px;right:16px;z-index:9999;background:#1a2e4a;color:#fff;padding:10px 16px;border-radius:12px;font-size:0.82rem;font-family:Lato,sans-serif;box-shadow:0 4px 20px rgba(0,0,0,0.4);display:flex;align-items:center;gap:8px;animation:slideIn .4s ease';
+badge.style.cssText = 'position:fixed;top:16px;right:16px;z-index:9999;background:#004d26;color:#fff;padding:10px 16px;border-radius:12px;font-size:0.82rem;font-family:Lato,sans-serif;box-shadow:0 4px 20px rgba(0,0,0,0.4);display:flex;align-items:center;gap:8px;animation:slideIn .4s ease';
 badge.innerHTML = '<span style="font-size:20px">' + user.avatar + '</span><div><div style="font-weight:700">Bonjour, ' + user.name + ' !</div><div style="opacity:0.65;font-size:0.72rem">' + (user.guest?'Mode invité':'Connecté') + '</div></div>';
 document.body.appendChild(badge);
 setTimeout(()=>badge.style.opacity='0', 3000);
@@ -2304,30 +2368,30 @@ return `<div class="inv" style="background:#faf7ee">
 ${biz.phone2?`<div>&#128222; ${biz.phone2}</div>`:''}
 </div>
 <div style="text-align:right">
-<div style="font-family:Oswald,sans-serif;font-size:1.6rem;font-weight:800;color:#1a2e4a;letter-spacing:2px"><span style="${biz.nameStyle}">${biz.name}</span></div>
+<div style="font-family:Oswald,sans-serif;font-size:1.6rem;font-weight:800;color:#004d26;letter-spacing:2px"><span style="${biz.nameStyle}">${biz.name}</span></div>
 <div style="font-size:0.90rem;color:#c9a84c;letter-spacing:1px;margin-top:2px"><span style="${biz.subStyle}">${biz.sub}</span></div>
 </div>
 </div>
 <div style="padding:10px 20px;display:grid;grid-template-columns:1fr auto 1fr;gap:10px;border-bottom:1.5px solid #c9a84c;align-items:center">
 <div style="display:flex;gap:6px;font-size:0.8rem">
-<div style="border:1px solid #1a2e4a;padding:4px 10px;border-radius:3px;display:grid;grid-template-columns:repeat(3,auto);gap:4px;align-items:center">
+<div style="border:1px solid #004d26;padding:4px 10px;border-radius:3px;display:grid;grid-template-columns:repeat(3,auto);gap:4px;align-items:center">
 ${meta.date.split('/').map((d,i)=>`<span style="border-bottom:1px solid #c9a84c;text-align:center;min-width:24px;font-weight:700">${d}</span>`).join('<span style="color:#c9a84c">/</span>')}
 </div>
-<span style="font-weight:700;align-self:center;color:#1a2e4a">التاريخ</span>
+<span style="font-weight:700;align-self:center;color:#004d26">التاريخ</span>
 </div>
-<div style="background:#1a2e4a;color:#fff;padding:6px 16px;border-radius:4px;font-family:Oswald,sans-serif;font-size:1.05rem;font-weight:800;text-align:center;letter-spacing:1px">قائمة المبيعات<br><small style="font-size:1.08rem;opacity:0.7">${meta.docType}</small></div>
+<div style="background:#004d26;color:#fff;padding:6px 16px;border-radius:4px;font-family:Oswald,sans-serif;font-size:1.05rem;font-weight:800;text-align:center;letter-spacing:1px">قائمة المبيعات<br><small style="font-size:1.08rem;opacity:0.7">${meta.docType}</small></div>
 <div style="text-align:right;font-size:0.8rem">
-<span style="font-weight:700;color:#1a2e4a">اسم العميل: </span>
+<span style="font-weight:700;color:#004d26">اسم العميل: </span>
 <span style="border-bottom:1px solid #c9a84c;display:inline-block;min-width:120px;font-weight:600"><span style="${cli.nameStyle}">${cli.name}</span></span>
 </div>
 </div>
 <div style="padding:0 20px">
-<table class="inv-tbl" style="border:1.5px solid #1a2e4a">
-<thead><tr style="background:#1a2e4a">
+<table class="inv-tbl" style="border:1.5px solid #004d26">
+<thead><tr style="background:#004d26">
 <th>الوصف (النوع، المقاس، المنشأ)</th>
-<th style="width:70px;text-align:center;background:#c9a84c;color:#1a2e4a">الوحدة<br><small>م²/قطعة</small></th>
+<th style="width:70px;text-align:center;background:#c9a84c;color:#004d26">الوحدة<br><small>م²/قطعة</small></th>
 <th style="width:60px;text-align:center">الكمية</th>
-<th style="width:80px;text-align:right;background:#c9a84c;color:#1a2e4a">سعر الوحدة<br><small>د.ع/$</small></th>
+<th style="width:80px;text-align:right;background:#c9a84c;color:#004d26">سعر الوحدة<br><small>د.ع/$</small></th>
 <th style="width:80px;text-align:right">الإجمالي</th>
 </tr></thead>
 <tbody>
@@ -2345,16 +2409,16 @@ ${Array(empty).fill(`<tr style="border-bottom:1px solid #e8ddb8"><td style="heig
 </div>
 <div style="padding:6px 20px;display:flex;justify-content:flex-end">
 <table style="font-size:0.96rem;border-collapse:collapse;min-width:220px">
-<tr style="border:1px solid #1a2e4a"><td style="padding:5px 12px;font-weight:700;direction:rtl;background:#f0e8c8">المجموع الفرعي</td><td style="padding:5px 14px;text-align:right;min-width:80px">${fmt(totals.sub)}</td></tr>
-${totals.disc>0?`<tr style="border:1px solid #1a2e4a"><td style="padding:5px 12px;font-weight:700;direction:rtl;background:#f0e8c8">الخصم</td><td style="padding:5px 14px;text-align:right;color:#dc2626">-${fmt(totals.disc)}</td></tr>`:''}
-<tr style="border:1.5px solid #1a2e4a;background:#1a2e4a"><td style="padding:7px 12px;font-weight:800;color:#c9a84c;direction:rtl">الصافي النهائي</td><td style="padding:7px 14px;text-align:right;font-weight:800;color:#fff;font-size:1rem">${fmt(totals.grand)}</td></tr>
+<tr style="border:1px solid #004d26"><td style="padding:5px 12px;font-weight:700;direction:rtl;background:#f0e8c8">المجموع الفرعي</td><td style="padding:5px 14px;text-align:right;min-width:80px">${fmt(totals.sub)}</td></tr>
+${totals.disc>0?`<tr style="border:1px solid #004d26"><td style="padding:5px 12px;font-weight:700;direction:rtl;background:#f0e8c8">الخصم</td><td style="padding:5px 14px;text-align:right;color:#dc2626">-${fmt(totals.disc)}</td></tr>`:''}
+<tr style="border:1.5px solid #004d26;background:#004d26"><td style="padding:7px 12px;font-weight:800;color:#c9a84c;direction:rtl">الصافي النهائي</td><td style="padding:7px 14px;text-align:right;font-weight:800;color:#fff;font-size:1rem">${fmt(totals.grand)}</td></tr>
 </table>
 </div>
 <div style="background:#c9a84c;padding:8px 20px;margin:6px 0 0">
-<div style="font-size:0.8rem;font-weight:700;color:#1a2e4a;direction:rtl">المبلغ كتابةً: <span style="font-style:italic;font-weight:400">${words.charAt(0).toUpperCase()+words.slice(1)} francs</span></div>
+<div style="font-size:0.8rem;font-weight:700;color:#004d26;direction:rtl">المبلغ كتابةً: <span style="font-style:italic;font-weight:400">${words.charAt(0).toUpperCase()+words.slice(1)} francs</span></div>
 </div>
 ${meta.note?`<div style="padding:8px 20px;background:#fef9e7;border:1px solid #e8ddb8;font-size:0.90rem;direction:rtl">
-<div style="font-weight:700;color:#1a2e4a;margin-bottom:4px">شروط وملاحظات هامة:</div>
+<div style="font-weight:700;color:#004d26;margin-bottom:4px">شروط وملاحظات هامة:</div>
 <div>${meta.note}</div></div>`:''}
 <div style="padding:16px 20px;display:flex;justify-content:space-between;border-top:1px dashed #c9a84c;font-size:0.93rem;direction:rtl">
 <div><span style="border-top:1px solid #334155;display:inline-block;min-width:100px;padding-top:4px">الوامام</span></div>
@@ -2440,11 +2504,11 @@ const empty=Math.max(0,9-rows.length);
 return `<div class="inv">
 <div style="display:flex;overflow:hidden">
 <div style="background:#0097c4;flex:1;padding:16px 20px;position:relative">
-<div style="position:absolute;right:-18px;top:0;bottom:0;width:40px;background:#e8621a;transform:skewX(-8deg)"></div>
+<div style="position:absolute;right:-18px;top:0;bottom:0;width:40px;background:#CE1126;transform:skewX(-8deg)"></div>
 <div style="font-family:Oswald,sans-serif;font-size:1.3rem;font-weight:800;color:#fff;letter-spacing:2px"><span style="${biz.nameStyle}">${biz.name}</span></div>
 <div style="font-size:0.96rem;color:rgba(255,255,255,0.8);letter-spacing:1px;text-transform:uppercase;margin-top:2px"><span style="${biz.subStyle}">${biz.sub}</span></div>
 </div>
-<div style="background:#e8621a;padding:16px 20px 16px 28px;text-align:right;min-width:180px">
+<div style="background:#CE1126;padding:16px 20px 16px 28px;text-align:right;min-width:180px">
 <div style="font-size:0.96rem;color:#fff;line-height:2">
 <div>&#128222; ${biz.phone}</div>
 ${biz.email!=='—'?`<div>&#9993; ${biz.email}</div>`:''}
@@ -2453,11 +2517,11 @@ ${biz.email!=='—'?`<div>&#9993; ${biz.email}</div>`:''}
 </div>
 </div>
 <!-- colored stripes -->
-<div style="height:5px;background:linear-gradient(90deg,#0097c4 50%,#e8621a 50%)"></div>
+<div style="height:5px;background:linear-gradient(90deg,#0097c4 50%,#CE1126 50%)"></div>
 <!-- No / Date -->
 <div style="padding:10px 20px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #e2e8f0">
 <div style="font-size:1.0rem"><strong>No:</strong> ${meta.order}</div>
-<div style="background:#e8621a;color:#fff;padding:4px 12px;border-radius:4px;font-family:Oswald,sans-serif;font-weight:700;font-size:1.0rem">${meta.docType}</div>
+<div style="background:#CE1126;color:#fff;padding:4px 12px;border-radius:4px;font-family:Oswald,sans-serif;font-weight:700;font-size:1.0rem">${meta.docType}</div>
 <div style="display:flex;align-items:center;gap:6px;font-size:1.0rem">
 <div style="background:#0097c4;color:#fff;padding:4px 10px;border-radius:3px;font-weight:700;font-size:0.8rem">Date :</div>
 <span>${meta.date}</span>
@@ -2465,7 +2529,7 @@ ${biz.email!=='—'?`<div>&#9993; ${biz.email}</div>`:''}
 </div>
 <!-- Nom / Adresse rows -->
 <div style="padding:6px 20px;display:grid;grid-template-columns:auto 1fr;gap:8px;border-bottom:1px solid #e2e8f0">
-<div style="background:#e8621a;color:#fff;padding:4px 10px;border-radius:3px;font-size:0.93rem;font-weight:700">Nom</div>
+<div style="background:#CE1126;color:#fff;padding:4px 10px;border-radius:3px;font-size:0.93rem;font-weight:700">Nom</div>
 <div style="border-bottom:1.5px solid #0097c4;padding:6px 10px"><span style="${cli.nameStyle}">${cli.name}</span></div>
 </div>
 <div style="padding:6px 20px;display:grid;grid-template-columns:auto 1fr;gap:8px;border-bottom:1px solid #e2e8f0">
@@ -2508,7 +2572,7 @@ ${meta.note?`<div style="padding:4px 20px 8px;font-size:0.87rem;color:#475569;fo
 <div style="padding:14px 20px;border-top:1px solid #e2e8f0">${sigBlock(['Signature Client','Signature Autorisée'])}</div>
 <!-- footer stripes -->
 <div style="height:5px;background:#0097c4"></div>
-<div style="height:5px;background:#e8621a"></div>
+<div style="height:5px;background:#CE1126"></div>
 <div style="height:5px;background:#f0b429"></div>
 </div>`;
 }
@@ -2697,11 +2761,11 @@ const rows=items.filter(it=>it.desc||it.qté);
 const empty=Math.max(0,12-rows.length);
 return `<div class="inv" style="background:#fff">
 <!-- HEADER: dark navy with gold diagonal -->
-<div style="background:#1a2e4a;padding:0;position:relative;overflow:hidden;min-height:90px">
+<div style="background:#004d26;padding:0;position:relative;overflow:hidden;min-height:90px">
 <!-- Gold diagonal stripe top-left -->
 <div style="position:absolute;top:0;left:0;width:0;height:0;border-style:solid;border-width:90px 160px 0 0;border-color:#f0a500 transparent transparent transparent;opacity:0.9"></div>
 <div style="position:absolute;top:0;left:0;padding:12px 16px;z-index:2">
-<div style="background:#f0a500;color:#1a2e4a;padding:3px 10px;border-radius:3px;font-family:Oswald,sans-serif;font-weight:800;font-size:0.90rem;letter-spacing:1px;display:inline-block">FACTURE</div>
+<div style="background:#f0a500;color:#004d26;padding:3px 10px;border-radius:3px;font-family:Oswald,sans-serif;font-weight:800;font-size:0.90rem;letter-spacing:1px;display:inline-block">FACTURE</div>
 <div style="font-size:0.7rem;color:rgba(255,255,255,0.8);margin-top:4px">N° Série ${meta.order}</div>
 </div>
 <div style="position:absolute;top:0;right:0;padding:12px 18px">
@@ -2710,7 +2774,7 @@ return `<div class="inv" style="background:#fff">
 <div style="font-family:Oswald,sans-serif;font-size:1.3rem;font-weight:900;color:#fff;letter-spacing:1px;text-align:right">${biz.name||'NOOR ALAM MACHINERIES'}</div>
 <div style="font-size:0.90rem;color:#f0a500;letter-spacing:0.5px;text-align:right">${biz.sub||'নুর আলম মেশিনারীজ'}</div>
 </div>
-<div style="width:44px;height:44px;background:#f0a500;border-radius:50%;overflow:hidden;display:flex;align-items:center;justify-content:center;font-family:Oswald,sans-serif;font-size:0.8rem;font-weight:900;color:#1a2e4a;flex-shrink:0">${biz.logo?`<img src="${biz.logo}" style="width:100%;height:100%;object-fit:contain">`:`NM`}</div>
+<div style="width:44px;height:44px;background:#f0a500;border-radius:50%;overflow:hidden;display:flex;align-items:center;justify-content:center;font-family:Oswald,sans-serif;font-size:0.8rem;font-weight:900;color:#004d26;flex-shrink:0">${biz.logo?`<img src="${biz.logo}" style="width:100%;height:100%;object-fit:contain">`:`NM`}</div>
 </div>
 <div style="font-size:1.08rem;color:rgba(255,255,255,0.7);text-align:right;margin-top:4px;line-height:1.6">${biz.sub2||'Importateur Pièces Machines - Grossiste & Détaillant'}</div>
 </div>
@@ -2740,18 +2804,18 @@ return `<div class="inv" style="background:#fff">
 </div>
 <!-- TABLE -->
 <div style="padding:0 18px">
-<table style="width:100%;border-collapse:collapse;table-layout:fixed;border:1px solid #1a2e4a">
+<table style="width:100%;border-collapse:collapse;table-layout:fixed;border:1px solid #004d26">
 <thead><tr style="background:#f0a500">
-<th style="padding:8px 6px;color:#1a2e4a;font-size:1.0rem;font-weight:700;width:42px;text-align:center;white-space:nowrap;border-right:1px solid rgba(0,0,0,0.1)">N°</th>
-<th style="padding:8px 8px;color:#1a2e4a;font-size:1.0rem;font-weight:700;text-align:center;border-right:1px solid rgba(0,0,0,0.1)">Description</th>
-<th style="padding:8px 6px;color:#1a2e4a;font-size:1.0rem;font-weight:700;width:58px;text-align:center;white-space:nowrap;border-right:1px solid rgba(0,0,0,0.1)">Qté</th>
-<th style="padding:8px 6px;color:#1a2e4a;font-size:1.0rem;font-weight:700;width:72px;text-align:center;white-space:nowrap;border-right:1px solid rgba(0,0,0,0.1)">Prix Unit.</th>
-<th style="padding:8px 6px;color:#1a2e4a;font-size:1.0rem;font-weight:700;width:78px;text-align:center;white-space:nowrap">Montant</th>
+<th style="padding:8px 6px;color:#004d26;font-size:1.0rem;font-weight:700;width:42px;text-align:center;white-space:nowrap;border-right:1px solid rgba(0,0,0,0.1)">N°</th>
+<th style="padding:8px 8px;color:#004d26;font-size:1.0rem;font-weight:700;text-align:center;border-right:1px solid rgba(0,0,0,0.1)">Description</th>
+<th style="padding:8px 6px;color:#004d26;font-size:1.0rem;font-weight:700;width:58px;text-align:center;white-space:nowrap;border-right:1px solid rgba(0,0,0,0.1)">Qté</th>
+<th style="padding:8px 6px;color:#004d26;font-size:1.0rem;font-weight:700;width:72px;text-align:center;white-space:nowrap;border-right:1px solid rgba(0,0,0,0.1)">Prix Unit.</th>
+<th style="padding:8px 6px;color:#004d26;font-size:1.0rem;font-weight:700;width:78px;text-align:center;white-space:nowrap">Montant</th>
 </tr></thead>
 <tbody>
 ${rows.map((it,i)=>`
 <tr style="border-bottom:1px solid #e2e8f0">
-<td style="padding:9px 8px;text-align:center;font-weight:700;color:#1a2e4a;border-right:1px solid #e2e8f0">${String(i+1).padStart(2,'0')}</td>
+<td style="padding:9px 8px;text-align:center;font-weight:700;color:#004d26;border-right:1px solid #e2e8f0">${String(i+1).padStart(2,'0')}</td>
 <td style="padding:9px 10px;border-right:1px solid #e2e8f0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${it.desc||''}</td>
 <td style="padding:9px 8px;text-align:center;border-right:1px solid #e2e8f0">${it.qté||''}</td>
 <td style="padding:9px 8px;text-align:right;border-right:1px solid #e2e8f0">${it.price?parseFloat(it.price).toLocaleString('fr-FR'):''}</td>
@@ -2762,26 +2826,26 @@ ${Array(empty).fill(0).map((_,i)=>`<tr style="border-bottom:1px solid #e2e8f0"><
 </table>
 </div>
 <!-- IN WORD + TOTAL -->
-<div style="margin:0 18px;display:grid;grid-template-columns:1fr auto;border:1px solid #1a2e4a;border-top:none;background:#fef9ee">
+<div style="margin:0 18px;display:grid;grid-template-columns:1fr auto;border:1px solid #004d26;border-top:none;background:#fef9ee">
 <div style="padding:8px 12px;font-size:0.93rem;font-style:italic">
 <span style="font-weight:700">En lettres : </span>${words.charAt(0).toUpperCase()+words.slice(1)}
 </div>
-<div style="display:flex;align-items:center;gap:10px;padding:8px 12px;border-left:1px solid #1a2e4a">
+<div style="display:flex;align-items:center;gap:10px;padding:8px 12px;border-left:1px solid #004d26">
 <span style="font-weight:700;font-size:0.96rem">Total</span>
-<span style="background:#f0a500;color:#1a2e4a;padding:4px 14px;border-radius:4px;font-weight:800;font-size:1rem">${fmt(totals.grand)}</span>
+<span style="background:#f0a500;color:#004d26;padding:4px 14px;border-radius:4px;font-weight:800;font-size:1rem">${fmt(totals.grand)}</span>
 </div>
 </div>
 <!-- FOOTER -->
 <div style="padding:10px 18px;display:flex;justify-content:space-between;align-items:center;border-top:1px dashed #e2e8f0;margin-top:6px">
 <div style="text-align:center"><div style="border-top:1px solid #334155;min-width:100px;padding-top:4px;font-size:1.0rem">Signature Client</div></div>
 <div style="text-align:center">
-<div style="font-family:Oswald,sans-serif;font-size:0.8rem;color:#1a2e4a;font-weight:700">Notre principe : Honnêteté et Qualité</div>
-<div style="font-size:0.93rem;color:#1a2e4a;font-weight:700">${biz.web||'www.nooralammachinery.com'}</div>
+<div style="font-family:Oswald,sans-serif;font-size:0.8rem;color:#004d26;font-weight:700">Notre principe : Honnêteté et Qualité</div>
+<div style="font-size:0.93rem;color:#004d26;font-weight:700">${biz.web||'www.nooralammachinery.com'}</div>
 </div>
 <div style="text-align:center"><div style="border-top:1px solid #334155;min-width:100px;padding-top:4px;font-size:1.0rem">Signature Vendeur</div></div>
 </div>
 <!-- DARK FOOTER -->
-<div style="background:#1a2e4a;padding:8px 18px;display:grid;grid-template-columns:1fr 1fr;gap:8px;font-size:1.08rem;color:rgba(255,255,255,0.85)">
+<div style="background:#004d26;padding:8px 18px;display:grid;grid-template-columns:1fr 1fr;gap:8px;font-size:1.08rem;color:rgba(255,255,255,0.85)">
 <div><span style="font-weight:700;color:#f0a500">Siège Social : </span>${biz.addr||'35, Hazi Hamida Market (2nd Floor)'}</div>
 <div style="text-align:right"><span style="font-weight:700;color:#f0a500">Agence : </span>${cli.city||'Agence Principale'}</div>
 </div>
@@ -2796,12 +2860,12 @@ return `<div class="inv" style="background:#fff">
 <div style="padding:12px 18px;display:grid;grid-template-columns:1fr auto 1fr;gap:12px;align-items:center;border-bottom:3px solid #1a5cbe">
 <!-- Left contacts -->
 <div style="font-size:1.0rem;color:#334155;line-height:1.8;direction:rtl">
-<div style="font-weight:700;color:#e8621a">تعز - صبر الموادم<br>جوار مدرسة النور</div>
+<div style="font-weight:700;color:#CE1126">تعز - صبر الموادم<br>جوار مدرسة النور</div>
 <div style="font-weight:700;color:#1a5cbe">${biz.phone||biz.phone||'775621657'} - ${biz.phone2||biz.phone2||'737305733'}</div>
 </div>
 <!-- Center logo -->
 <div style="text-align:center">
-<div style="width:64px;height:64px;border:3px solid #e8621a;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto;background:#f0f6ff">
+<div style="width:64px;height:64px;border:3px solid #CE1126;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto;background:#f0f6ff">
 <div >${biz.logo?`<img src="${biz.logo}" style="width:48px;height:48px;object-fit:contain;border-radius:50%">`:'<span style="font-family:Oswald,sans-serif;font-size:1rem;font-weight:900;color:#1a5cbe">'+(biz.name||'AS')[0]+'</span>'}</div>
 </div>
 <div style="font-size:0.90rem;color:#1a5cbe;font-weight:700;margin-top:2px">أيمن ستور</div>
@@ -2813,7 +2877,7 @@ return `<div class="inv" style="background:#fff">
 </div>
 </div>
 <!-- INVOICE TYPE BAR -->
-<div style="margin:8px 18px;border:2px solid #e8621a;border-radius:4px;padding:6px 14px;text-align:center;direction:rtl">
+<div style="margin:8px 18px;border:2px solid #CE1126;border-radius:4px;padding:6px 14px;text-align:center;direction:rtl">
 <span style="font-family:Oswald,sans-serif;font-size:1rem;font-weight:800;color:#1a5cbe">فاتورة بيع نقدًا / آجل</span>
 </div>
 <!-- DATE + NO -->
@@ -2839,8 +2903,8 @@ return `<div class="inv" style="background:#fff">
 <thead>
 <tr style="background:#1a5cbe">
 <th style="padding:8px 8px;color:#fff;font-size:0.90rem;font-weight:700;text-align:center">التفاصيل<br><small style="color:rgba(255,255,255,0.8);font-size:1.08rem">Description</small></th>
-<th style="padding:8px 6px;color:#fff;font-size:0.90rem;font-weight:700;text-align:center;width:14%;background:#e8621a">الكمية<br><small style="font-size:1.08rem">Qté</small></th>
-<th style="padding:8px 6px;color:#fff;font-size:0.90rem;font-weight:700;text-align:center;width:18%;background:#e8621a">سعر الوحدة<br><small style="font-size:1.08rem">Prix Unit.</small></th>
+<th style="padding:8px 6px;color:#fff;font-size:0.90rem;font-weight:700;text-align:center;width:14%;background:#CE1126">الكمية<br><small style="font-size:1.08rem">Qté</small></th>
+<th style="padding:8px 6px;color:#fff;font-size:0.90rem;font-weight:700;text-align:center;width:18%;background:#CE1126">سعر الوحدة<br><small style="font-size:1.08rem">Prix Unit.</small></th>
 <th style="padding:8px 6px;color:#fff;font-size:0.90rem;font-weight:700;text-align:center;width:20%">القيمة الإجمالية<br><small style="color:rgba(255,255,255,0.8);font-size:1.08rem">Montant Total</small></th>
 </tr>
 </thead>
@@ -2880,7 +2944,7 @@ ${Array(empty).fill(`<tr style="border-bottom:1px dotted #bfdbfe"><td style="hei
 <div style="text-align:left">توقيع البائع / <span style="border-bottom:1px solid #334155;display:inline-block;min-width:80px"> </span></div>
 </div>
 <div style="height:5px;background:#1a5cbe"></div>
-<div style="height:3px;background:#e8621a"></div>
+<div style="height:3px;background:#CE1126"></div>
 </div>`;
 }
 
@@ -3237,14 +3301,14 @@ ${Array(empty).fill(`<tr style="border-bottom:1px solid #b8d4e8"><td style="heig
 function renderModernInv(t,biz,cli,meta,totals,words){
 const rows=items.filter(it=>it.desc||it.qté);
 const empty=Math.max(0,6-rows.length);
-return `<div class="inv" style="border:3px solid #1a2e4a;border-radius:8px;overflow:hidden;background:#fff">
+return `<div class="inv" style="border:3px solid #004d26;border-radius:8px;overflow:hidden;background:#fff">
 <!-- TOP corner decoration -->
 <div style="position:relative">
 <div style="position:absolute;top:0;right:0;width:80px;height:60px;overflow:hidden;pointer-events:none">
-<div style="width:0;height:0;border-style:solid;border-width:0 80px 60px 0;border-color:transparent #e8621a transparent transparent;opacity:0.7"></div>
+<div style="width:0;height:0;border-style:solid;border-width:0 80px 60px 0;border-color:transparent #CE1126 transparent transparent;opacity:0.7"></div>
 </div>
 <div style="position:absolute;top:0;left:0;width:60px;height:60px;overflow:hidden;pointer-events:none">
-<div style="width:0;height:0;border-style:solid;border-width:60px 60px 0 0;border-color:#1a2e4a transparent transparent transparent;opacity:0.15"></div>
+<div style="width:0;height:0;border-style:solid;border-width:60px 60px 0 0;border-color:#004d26 transparent transparent transparent;opacity:0.15"></div>
 </div>
 </div>
 <!-- HEADER -->
@@ -3252,28 +3316,28 @@ return `<div class="inv" style="border:3px solid #1a2e4a;border-radius:8px;overf
 <div style="display:flex;align-items:center;gap:12px">
 <div style="width:52px;height:52px;background:#e8e8e8;border-radius:8px;border:1px solid #cbd5e1;overflow:hidden;display:flex;align-items:center;justify-content:center;font-size:22px">${biz.logo?`<img src="${biz.logo}" style="width:100%;height:100%;object-fit:contain">`:'🏢'}</div>
 <div>
-<div style="font-family:Oswald,sans-serif;font-size:1.2rem;font-weight:800;color:#1a2e4a"><span style="${biz.nameStyle}">${biz.name}</span></div>
+<div style="font-family:Oswald,sans-serif;font-size:1.2rem;font-weight:800;color:#004d26"><span style="${biz.nameStyle}">${biz.name}</span></div>
 <div style="font-size:1.08rem;color:#475569;font-style:italic"><span style="${biz.subStyle}">${biz.sub}</span></div>
 </div>
 </div>
-<div style="font-family:Oswald,sans-serif;font-size:2.4rem;font-weight:900;color:#1a2e4a;letter-spacing:2px">FACTURE</div>
+<div style="font-family:Oswald,sans-serif;font-size:2.4rem;font-weight:900;color:#004d26;letter-spacing:2px">FACTURE</div>
 </div>
 <!-- INFO BAR -->
-<div style="background:#1a2e4a;padding:9px 20px;display:grid;grid-template-columns:1fr 1fr;gap:10px">
+<div style="background:#004d26;padding:9px 20px;display:grid;grid-template-columns:1fr 1fr;gap:10px">
 <div style="font-size:1.02rem;color:rgba(255,255,255,0.8);line-height:1.8">
 <div>&#128205; ${biz.addr}</div>
 <div>&#128222; ${biz.phone} | &#9993; ${biz.email}</div>
 </div>
 <div style="text-align:right;font-size:1.02rem;color:rgba(255,255,255,0.8);line-height:1.8">
-<div>N° FACTURE: <strong style="color:#e8621a">#${meta.order}</strong></div>
+<div>N° FACTURE: <strong style="color:#CE1126">#${meta.order}</strong></div>
 <div>DATE: <strong style="color:#fff">${meta.date}</strong></div>
 <div>ID CLIENT: <strong style="color:#fff">${cli.name.substring(0,8).toUpperCase()}</strong></div>
 </div>
 </div>
 <!-- INVOICE TO -->
 <div style="padding:12px 20px;border-bottom:1px solid #e2e8f0;font-size:0.96rem">
-<div style="font-weight:700;color:#1a2e4a;font-size:1.0rem;letter-spacing:1px;text-transform:uppercase;margin-bottom:5px">FACTURER À :</div>
-<div style="font-weight:800;font-size:1rem;color:#1a2e4a"><span style="${cli.nameStyle}">${cli.name}</span></div>
+<div style="font-weight:700;color:#004d26;font-size:1.0rem;letter-spacing:1px;text-transform:uppercase;margin-bottom:5px">FACTURER À :</div>
+<div style="font-weight:800;font-size:1rem;color:#004d26"><span style="${cli.nameStyle}">${cli.name}</span></div>
 <div style="color:#475569">&#128222; ${cli.phone}</div>
 ${biz.email!=='—'?`<div style="color:#475569">&#9993; ${biz.email}</div>`:''}
 <div style="color:#475569">&#128205; ${cli.addr}</div>
@@ -3284,8 +3348,8 @@ ${biz.email!=='—'?`<div style="color:#475569">&#9993; ${biz.email}</div>`:''}
 </div>
 <!-- TABLE -->
 <div style="padding:0 20px">
-<table style="width:100%;border-collapse:collapse;table-layout:fixed;border:1px solid #1a2e4a">
-<thead><tr style="background:#1a2e4a">
+<table style="width:100%;border-collapse:collapse;table-layout:fixed;border:1px solid #004d26">
+<thead><tr style="background:#004d26">
 <th style="padding:8px 8px;color:#fff;font-size:1.0rem;width:36px;text-align:center;white-space:nowrap">N°</th>
 <th style="padding:8px 8px;color:#fff;font-size:1.0rem;text-align:left">Description</th>
 <th style="padding:8px 8px;color:#fff;font-size:1.0rem;width:75px;text-align:right;white-space:nowrap">Prix</th>
@@ -3295,7 +3359,7 @@ ${biz.email!=='—'?`<div style="color:#475569">&#9993; ${biz.email}</div>`:''}
 <tbody>
 ${rows.map((it,i)=>`
 <tr style="border-bottom:1px solid #e2e8f0">
-<td style="padding:8px;text-align:center;font-weight:700;color:#1a2e4a">${String(i+1).padStart(2,'0')}</td>
+<td style="padding:8px;text-align:center;font-weight:700;color:#004d26">${String(i+1).padStart(2,'0')}</td>
 <td style="padding:8px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${it.desc||''}</td>
 <td style="padding:8px;text-align:right">${it.price?'$'+parseFloat(it.price).toLocaleString('fr-FR'):''}</td>
 <td style="padding:8px;text-align:center">${it.qté||''}</td>
@@ -3314,7 +3378,7 @@ ${Array(empty).fill(`<tr style="border-bottom:1px solid #e2e8f0"><td style="heig
 <table style="font-size:0.96rem;border-collapse:collapse;min-width:160px;align-self:start">
 <tr><td style="padding:5px 10px;font-weight:700">Sous-total</td><td style="padding:5px 10px;text-align:right;border-left:1px solid #e2e8f0">$${fmt(totals.sub)}</td></tr>
 <tr><td style="padding:5px 10px;font-weight:700">Taxe</td><td style="padding:5px 10px;text-align:right;border-left:1px solid #e2e8f0">$${fmt(totals.tax)}</td></tr>
-<tr style="background:#1a2e4a;color:#fff"><td style="padding:8px 10px;font-weight:800;font-family:Oswald,sans-serif">Total</td><td style="padding:8px 10px;text-align:right;font-weight:800;font-size:1rem">$${fmt(totals.grand)}</td></tr>
+<tr style="background:#004d26;color:#fff"><td style="padding:8px 10px;font-weight:800;font-family:Oswald,sans-serif">Total</td><td style="padding:8px 10px;text-align:right;font-weight:800;font-size:1rem">$${fmt(totals.grand)}</td></tr>
 </table>
 </div>
 <!-- FOOTER -->
@@ -3327,14 +3391,14 @@ ${biz.web?`<div>&#127760; ${biz.web}</div>`:''}
 <div style="text-align:right">
 <div style="font-size:1.05rem;color:#475569;font-style:italic;margin-bottom:4px">Merci</div>
 <div style="font-size:0.90rem;font-style:italic;color:#94a3b8;margin-bottom:16px">signature</div>
-<div style="border-top:1.5px solid #1a2e4a;min-width:110px;padding-top:4px;font-size:1.0rem;text-align:center;font-weight:700">Signature Autorisée</div>
+<div style="border-top:1.5px solid #004d26;min-width:110px;padding-top:4px;font-size:1.0rem;text-align:center;font-weight:700">Signature Autorisée</div>
 </div>
 </div>
 <!-- BOTTOM corner decorations -->
 <div style="display:flex;height:8px">
-<div style="flex:1;background:#e8621a"></div>
-<div style="flex:2;background:#1a2e4a"></div>
-<div style="flex:1;background:#e8621a"></div>
+<div style="flex:1;background:#CE1126"></div>
+<div style="flex:2;background:#004d26"></div>
+<div style="flex:1;background:#CE1126"></div>
 </div>
 </div>`;
 }
@@ -3527,7 +3591,7 @@ return `<div class="inv" style="background:#fff;position:relative;overflow:hidde
 <!-- TOP-RIGHT decoration (dark green triangle + orange stripe) -->
 <div style="position:absolute;top:0;right:0;width:130px;height:90px;pointer-events:none;overflow:hidden">
 <div style="position:absolute;top:0;right:0;width:0;height:0;border-style:solid;border-width:0 130px 90px 0;border-color:transparent #1a5c2a transparent transparent;opacity:0.18"></div>
-<div style="position:absolute;top:14px;right:0;width:110px;height:16px;background:#e8621a;transform:rotate(-35deg) translateX(20px);opacity:0.7"></div>
+<div style="position:absolute;top:14px;right:0;width:110px;height:16px;background:#CE1126;transform:rotate(-35deg) translateX(20px);opacity:0.7"></div>
 </div>
 
 <!-- HEADER -->
@@ -3535,9 +3599,9 @@ return `<div class="inv" style="background:#fff;position:relative;overflow:hidde
 <div>
 <div style="font-family:Oswald,sans-serif;font-size:2.4rem;font-weight:900;color:#1a5c2a;letter-spacing:1px;line-height:1">REÇU</div>
 <div style="display:flex;align-items:center;gap:5px;margin-top:5px">
-<div style="height:2px;width:18px;background:#e8621a"></div>
+<div style="height:2px;width:18px;background:#CE1126"></div>
 <div style="width:5px;height:5px;background:#1a5c2a;border-radius:50%"></div>
-<div style="width:5px;height:5px;background:#e8621a;border-radius:50%"></div>
+<div style="width:5px;height:5px;background:#CE1126;border-radius:50%"></div>
 <div style="height:2px;width:18px;background:#1a5c2a"></div>
 </div>
 </div>
@@ -3549,11 +3613,11 @@ return `<div class="inv" style="background:#fff;position:relative;overflow:hidde
 <!-- DATE + CLIENT -->
 <div style="padding:6px 20px 12px;font-size:1.0rem;border-bottom:1.5px solid #e2e8f0">
 <div style="display:flex;gap:8px;align-items:baseline;margin-bottom:9px">
-<span style="font-weight:700;color:#e8621a;min-width:50px">Date :</span>
+<span style="font-weight:700;color:#CE1126;min-width:50px">Date :</span>
 <span style="border-bottom:1.5px solid #94a3b8;flex:1;max-width:220px;display:inline-block">${meta.date}</span>
 </div>
 <div style="display:flex;gap:8px;align-items:baseline">
-<span style="font-weight:700;color:#e8621a;white-space:nowrap">Détails Client:</span>
+<span style="font-weight:700;color:#CE1126;white-space:nowrap">Détails Client:</span>
 <span style="border-bottom:1.5px solid #94a3b8;flex:1;display:inline-block">${cli.name}${cli.phone!=='—'?' &nbsp;|&nbsp; '+cli.phone:''}</span>
 </div>
 <div style="border-bottom:1px solid #e2e8f0;margin-top:10px"></div>
@@ -3562,7 +3626,7 @@ return `<div class="inv" style="background:#fff;position:relative;overflow:hidde
 <!-- TABLE -->
 <div style="padding:0 20px">
 <table style="width:100%;border-collapse:collapse;table-layout:fixed;border:1.5px solid #1a5c2a">
-<thead><tr style="background:#e8621a">
+<thead><tr style="background:#CE1126">
 <th style="padding:8px 6px;color:#fff;font-size:1.0rem;font-weight:700;width:36px;text-align:center;white-space:nowrap">N°</th>
 <th style="padding:8px 8px;color:#fff;font-size:1.0rem;font-weight:700;text-align:left">Description des Articles</th>
 <th style="padding:8px 6px;color:#fff;font-size:1.0rem;font-weight:700;width:48px;text-align:center;white-space:nowrap">Qté</th>
@@ -3588,7 +3652,7 @@ ${Array(empty).fill(`<tr style="border-bottom:1px solid #d1fae5"><td style="heig
 
 <!-- Payment details left -->
 <div style="font-size:1.0rem">
-<div style="color:#e8621a;font-weight:700;text-decoration:underline;margin-bottom:6px;font-size:0.8rem">Détails de Paiement:</div>
+<div style="color:#CE1126;font-weight:700;text-decoration:underline;margin-bottom:6px;font-size:0.8rem">Détails de Paiement:</div>
 <div style="color:#334155;line-height:2">
 <div>Banque: ${meta.other||biz.name}</div>
 <div>Compte N°: ${meta.order||'0123456789012'}</div>
@@ -3626,13 +3690,13 @@ ${Array(empty).fill(`<tr style="border-bottom:1px solid #d1fae5"><td style="heig
 <div style="background:#1a5c2a;padding:12px 20px;margin-top:4px">
 <div style="display:flex;justify-content:space-between;align-items:center">
 <div style="display:flex;align-items:center;gap:10px">
-<div style="width:42px;height:42px;background:#fff;border-radius:50%;overflow:hidden;display:flex;align-items:center;justify-content:center;font-size:22px;border:2px solid #e8621a">${biz.logo?`<img src="${biz.logo}" style="width:100%;height:100%;object-fit:contain">`:'🌿'}</div>
+<div style="width:42px;height:42px;background:#fff;border-radius:50%;overflow:hidden;display:flex;align-items:center;justify-content:center;font-size:22px;border:2px solid #CE1126">${biz.logo?`<img src="${biz.logo}" style="width:100%;height:100%;object-fit:contain">`:'🌿'}</div>
 <div>
 <div style="font-family:Oswald,sans-serif;font-size:1.08rem;font-weight:800;color:#fff;letter-spacing:1px">${biz.name||'GREEN VALLEY AGROVET & FARM INPUTS'}</div>
 <div style="font-size:1.08rem;color:rgba(255,255,255,0.75)"><span style="${biz.subStyle}">${biz.sub}</span></div>
 </div>
 </div>
-<div style="font-family:Oswald,sans-serif;font-size:1rem;font-weight:800;color:#e8621a;font-style:italic">Merci</div>
+<div style="font-family:Oswald,sans-serif;font-size:1rem;font-weight:800;color:#CE1126;font-style:italic">Merci</div>
 </div>
 <div style="margin-top:7px;display:flex;flex-wrap:wrap;gap:10px;font-size:0.96rem;color:rgba(255,255,255,0.85)">
 <span>&#128222; ${biz.phone}${biz.phone2?' / '+biz.phone2:''}</span>
@@ -3740,7 +3804,7 @@ function activateCode() {
 function saveSubscription(months, code) {
   var expiry = Date.now() + (months * 30 * 24 * 60 * 60 * 1000);
   var sub = { active:true, expiry:expiry, plan:months===12?'Annuel':months===6?'6 mois':'Mensuel', code:code, activatedAt:Date.now() };
-  try { localStorage.setItem('rp_subscription', JSON.stringify(sub)); } catch(e){}
+  storeSubscription(sub);
   if (currentUser && currentUser.email) {
     var users = getUsers();
     var idx = users.findIndex(function(u){ return u.email===currentUser.email; });
@@ -3759,14 +3823,25 @@ function startTrial() {
   if (sub && sub.trialUsed) { showSubError('Essai déjà utilisé. Activez un abonnement.'); return; }
   var expiry = Date.now() + (7 * 24 * 60 * 60 * 1000);
   var trial = { active:true, trial:true, trialUsed:true, expiry:expiry, plan:'Essai 7 jours' };
-  try { localStorage.setItem('rp_subscription', JSON.stringify(trial)); } catch(e){}
+  storeSubscription(trial);
   alert('Essai gratuit activé pour 7 jours !');
   hideSubScreen();
   enterApp(currentUser);
 }
 
 function getSubscription() {
-  try { return JSON.parse(localStorage.getItem('rp_subscription')||'null'); } catch(e){ return null; }
+  try {
+    var key = (currentUser && currentUser.email && !currentUser.guest) ? 'rp_sub_'+currentUser.email : 'rp_subscription';
+    return JSON.parse(localStorage.getItem(key)||'null');
+  } catch(e){ return null; }
+}
+function storeSubscription(sub) {
+  try {
+    var key = (currentUser && currentUser.email && !currentUser.guest) ? 'rp_sub_'+currentUser.email : 'rp_subscription';
+    localStorage.setItem(key, JSON.stringify(sub));
+    // Aussi mettre à jour currentUser.subscription
+    if (currentUser) currentUser.subscription = sub;
+  } catch(e) {}
 }
 
 function isSubscriptionValid() {
@@ -3787,12 +3862,18 @@ function hideSubScreen() {
 
 function checkSubscriptionAfterLogin(user) {
   currentUser = user;
+  // Charger l'abonnement spécifique à cet utilisateur depuis localStorage
+  try {
+    var userKey = (user && user.email && !user.guest) ? 'rp_sub_'+user.email : 'rp_subscription';
+    var userSub = JSON.parse(localStorage.getItem(userKey)||'null');
+    if (userSub) currentUser.subscription = userSub;
+  } catch(e) {}
   // Sync subscription status from Firebase (in case admin changed it remotely)
   if (fbDB && user && user.email && !user.guest) {
     fbLoadUser(user.email, function(fbUser) {
       if (fbUser && fbUser.subscription) {
         currentUser.subscription = fbUser.subscription;
-        try { localStorage.setItem('rp_subscription', JSON.stringify(fbUser.subscription)); } catch(e){}
+        storeSubscription(fbUser.subscription);
         var localUsers = getUsers();
         var idx = localUsers.findIndex(function(u){ return u.email===user.email; });
         if (idx>=0) { localUsers[idx].subscription = fbUser.subscription; saveUsers(localUsers); }
@@ -3823,7 +3904,7 @@ function addTrialBanner() {
     banner = document.createElement('div');
     banner.id = 'trialBanner';
     banner.className = 'no-print';
-    banner.style.cssText = 'background:linear-gradient(135deg,#fef3c7,#fde68a);border:1px solid #f59e0b;border-radius:10px;padding:10px 14px;margin:8px 16px;display:flex;align-items:center;gap:10px;font-size:0.82rem;color:#92400e;';
+    banner.style.cssText = 'background:linear-gradient(135deg,#fef3c7,#fde68a);border:1px solid #FCD116;border-radius:10px;padding:10px 14px;margin:8px 16px;display:flex;align-items:center;gap:10px;font-size:0.82rem;color:#92400e;';
     var appRoot = document.getElementById('appRoot');
     if (appRoot) appRoot.insertBefore(banner, appRoot.firstChild);
   }
@@ -3916,11 +3997,11 @@ function renderAdminContent(tab) {
     c.innerHTML = '<div class="admin-stat-grid">' +
       '<div class="admin-stat"><div class="admin-stat-num">' + data.stats.total + '</div><div class="admin-stat-lbl">Utilisateurs</div></div>' +
       '<div class="admin-stat"><div class="admin-stat-num" style="color:#22c55e">' + data.stats.active + '</div><div class="admin-stat-lbl">Abonnés actifs</div></div>' +
-      '<div class="admin-stat"><div class="admin-stat-num" style="color:#f59e0b">' + data.stats.trial + '</div><div class="admin-stat-lbl">En essai</div></div>' +
+      '<div class="admin-stat"><div class="admin-stat-num" style="color:#FCD116">' + data.stats.trial + '</div><div class="admin-stat-lbl">En essai</div></div>' +
       '<div class="admin-stat"><div class="admin-stat-num" style="color:#ef4444">' + data.stats.expired + '</div><div class="admin-stat-lbl">Expirés</div></div>' +
       '</div>' +
       '<div class="admin-card"><h3>💰 Revenus estimés</h3>' +
-      '<div style="font-size:2rem;font-weight:800;color:#e8621a;font-family:Oswald,sans-serif">' + totalRevenue.toLocaleString('fr-FR') + ' FG</div>' +
+      '<div style="font-size:2rem;font-weight:800;color:#CE1126;font-family:Oswald,sans-serif">' + totalRevenue.toLocaleString('fr-FR') + ' FG</div>' +
       '<div style="color:rgba(255,255,255,0.5);font-size:0.78rem;margin-top:4px">Basé sur les abonnements actifs</div>' +
       '</div>' +
       '<div class="admin-card"><h3>📊 Activité récente</h3>' +
@@ -3970,7 +4051,7 @@ function renderAdminContent(tab) {
     var codeRows = Object.keys(codes).map(function(k) {
       var c2 = codes[k];
       return '<tr>' +
-        '<td style="font-family:Oswald,sans-serif;letter-spacing:2px;color:#e8621a">' + k + '</td>' +
+        '<td style="font-family:Oswald,sans-serif;letter-spacing:2px;color:#CE1126">' + k + '</td>' +
         '<td>' + c2.months + ' mois</td>' +
         '<td>' + (c2.used ? '<span class="badge badge-red">Utilisé</span>' : '<span class="badge badge-green">Disponible</span>') + '</td>' +
         '<td style="font-size:0.72rem;color:rgba(255,255,255,0.4)">' + (c2.createdAt ? new Date(c2.createdAt).toLocaleDateString('fr-FR') : '—') + '</td>' +
@@ -4093,39 +4174,387 @@ function clearAllData() {
 }
 
 
+
+// ─── HISTORY ────────────────────────────────────────
+function getHistory() {
+  try {
+    var key = currentUser && currentUser.email ? 'rp_history_'+currentUser.email : 'rp_history_guest';
+    return JSON.parse(localStorage.getItem(key)||'[]');
+  } catch(e) { return []; }
+}
+function saveHistory(h) {
+  try {
+    var key = currentUser && currentUser.email ? 'rp_history_'+currentUser.email : 'rp_history_guest';
+    localStorage.setItem(key, JSON.stringify(h));
+  } catch(e) {}
+}
+
+/* ======= ÉTAT FILTRES HISTORIQUE ======= */
+var historyFilter = 'all'; // all | week | month | year
+var historyTab = 'recus';  // recus | clients
+
+function setHistoryFilter(f) {
+  historyFilter = f;
+  // Style boutons filtres
+  ['all','week','month','year'].forEach(function(k) {
+    var btn = document.getElementById('f_'+k);
+    if (!btn) return;
+    if (k === f) {
+      btn.style.background = '#CE1126';
+      btn.style.border = 'none';
+      btn.style.fontWeight = '700';
+    } else {
+      btn.style.background = 'rgba(255,255,255,0.12)';
+      btn.style.border = '1px solid rgba(255,255,255,0.2)';
+      btn.style.fontWeight = 'normal';
+    }
+  });
+  window._histPage = 0;
+  if (historyTab === 'recus') renderHistoryList();
+  else renderClientsList();
+}
+
+function switchHistoryTab(tab) {
+  historyTab = tab;
+  var tabRecus = document.getElementById('tabRecus');
+  var tabClients = document.getElementById('tabClients');
+  var listRecus = document.getElementById('historyList');
+  var listClients = document.getElementById('clientsList');
+  var searchBar = document.getElementById('historySearchBar');
+  if (tab === 'recus') {
+    if (tabRecus) { tabRecus.style.background = '#CE1126'; tabRecus.style.fontWeight = '700'; }
+    if (tabClients) { tabClients.style.background = 'rgba(255,255,255,0.12)'; tabClients.style.fontWeight = 'normal'; }
+    if (listRecus) listRecus.style.display = 'block';
+    if (listClients) listClients.style.display = 'none';
+    if (searchBar) searchBar.style.display = 'block';
+    renderHistoryList();
+  } else {
+    if (tabClients) { tabClients.style.background = '#CE1126'; tabClients.style.fontWeight = '700'; }
+    if (tabRecus) { tabRecus.style.background = 'rgba(255,255,255,0.12)'; tabRecus.style.fontWeight = 'normal'; }
+    if (listClients) listClients.style.display = 'block';
+    if (listRecus) listRecus.style.display = 'none';
+    if (searchBar) searchBar.style.display = 'none';
+    renderClientsList();
+  }
+}
+
+function filterHistoryByDate(h) {
+  if (historyFilter === 'all') return h;
+  var now = new Date();
+  return h.filter(function(e) {
+    if (!e.isoDate) return true;
+    var d = new Date(e.isoDate);
+    if (historyFilter === 'week') {
+      var day = now.getDay() || 7;
+      var monday = new Date(now); monday.setDate(now.getDate() - day + 1);
+      monday.setHours(0,0,0,0);
+      return d >= monday;
+    }
+    if (historyFilter === 'month') {
+      return d.getMonth() === now.getMonth() && d.getFullYear() === now.getFullYear();
+    }
+    if (historyFilter === 'year') {
+      return d.getFullYear() === now.getFullYear();
+    }
+    return true;
+  });
+}
+
+function updateHistoryStats(filtered) {
+  var total = filtered.reduce(function(s,e){ return s + (e.total||0); }, 0);
+  var clients = {};
+  filtered.forEach(function(e){ if (e.clientName && e.clientName !== '—') clients[e.clientName] = 1; });
+  var nc = document.getElementById('statCountVal');
+  var nt = document.getElementById('statTotalVal');
+  var nk = document.getElementById('statClientsVal');
+  if (nc) nc.textContent = filtered.length;
+  if (nt) nt.textContent = total.toLocaleString('fr-FR') + ' FG';
+  if (nk) nk.textContent = Object.keys(clients).length;
+}
+
+function addToHistory() {
+  try {
+    var biz = getBiz ? getBiz() : {};
+    var client = getClient ? getClient() : {};
+    var its = getItems ? getItems() : [];
+    var totals = computeTotals ? computeTotals(its) : {total:0};
+    var now = new Date();
+    var entry = {
+      id: Date.now(),
+      isoDate: now.toISOString(),
+      date: now.toLocaleDateString('fr-FR'),
+      time: now.toLocaleTimeString('fr-FR', {hour:'2-digit',minute:'2-digit'}),
+      templateName: TEMPLATES[selectedTemplate] ? TEMPLATES[selectedTemplate].name : 'Modèle',
+      templateEmoji: TEMPLATES[selectedTemplate] ? TEMPLATES[selectedTemplate].emoji : '📄',
+      bizName: biz.name || '',
+      clientName: client.name || '—',
+      clientPhone: client.phone || '',
+      total: totals.total || 0,
+      itemCount: its.filter(function(i){ return i.desc; }).length,
+      docType: (document.getElementById('docType')||{value:'Facture'}).value || 'Facture',
+      orderNo: (document.getElementById('orderNo')||{value:''}).value || '',
+      thumbnail: null
+    };
+    var previewEl = document.getElementById('invoice-preview') || document.querySelector('.invoice-preview');
+    if (previewEl && typeof html2canvas !== 'undefined') {
+      html2canvas(previewEl, {
+        scale: 0.3, useCORS: true, allowTaint: true,
+        backgroundColor: '#fff', logging: false,
+        width: previewEl.offsetWidth, height: previewEl.offsetHeight
+      }).then(function(canvas) {
+        entry.thumbnail = canvas.toDataURL('image/jpeg', 0.5);
+        var h = getHistory(); h.unshift(entry);
+        if (h.length > 2000) h = h.slice(0, 2000);
+        saveHistory(h);
+      }).catch(function() {
+        var h = getHistory(); h.unshift(entry);
+        if (h.length > 2000) h = h.slice(0, 2000);
+        h.forEach(function(e,i){if(i>=100)e.thumbnail=null;});
+        saveHistory(h); fbSaveHistory(h);
+      });
+    } else {
+      var h = getHistory(); h.unshift(entry);
+      if (h.length > 2000) h = h.slice(0, 2000);
+      h.forEach(function(e,i){if(i>=100)e.thumbnail=null;});
+      saveHistory(h); fbSaveHistory(h);
+    }
+  } catch(e) { console.warn('History save error:', e); }
+}
+
+function showHistory() {
+  var el = document.getElementById('historyScreen');
+  if (el) { el.style.display = 'flex'; }
+  historyFilter = 'all';
+  historyTab = 'recus';
+  setHistoryFilter('all');
+  // Sync Firebase en arrière-plan puis afficher
+  mergeHistoryWithFirebase(function() {
+    switchHistoryTab('recus');
+  });
+}
+function hideHistory() {
+  var el = document.getElementById('historyScreen');
+  if (el) el.style.display = 'none';
+}
+
+function renderHistoryList() {
+  var all = filterHistoryByDate(getHistory());
+  var search = (document.getElementById('historySearch')||{value:''}).value.toLowerCase().trim();
+  if (search) all = all.filter(function(e){ return (e.clientName||'').toLowerCase().includes(search) || (e.bizName||'').toLowerCase().includes(search); });
+  updateHistoryStats(all);
+  var el = document.getElementById('historyList');
+  if (!el) return;
+
+  if (!all.length) {
+    el.innerHTML = '<div style="text-align:center;padding:60px 20px;color:rgba(255,255,255,0.3)"><div style="font-size:48px;margin-bottom:12px">📭</div><div style="font-size:0.9rem">Aucun reçu pour cette période.</div></div>';
+    return;
+  }
+
+  // Pagination
+  var PAGE_SIZE = 30;
+  var page = window._histPage || 0;
+  var maxPage = Math.ceil(all.length / PAGE_SIZE) - 1;
+  if (page > maxPage) page = maxPage;
+  window._histPage = page;
+  var h = all.slice(page * PAGE_SIZE, page * PAGE_SIZE + PAGE_SIZE);
+
+  var html = '<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;flex-wrap:wrap;gap:8px">';
+  html += '<span style="color:rgba(255,255,255,0.6);font-size:0.82rem">' + all.length + ' reçu(s) — page '+(page+1)+'/'+( maxPage+1)+'</span>';
+  html += '<button onclick="clearHistory()" style="background:none;border:1px solid rgba(255,0,0,0.3);color:rgba(255,100,100,0.6);padding:4px 10px;border-radius:6px;font-size:0.75rem;cursor:pointer">🗑️ Tout effacer</button>';
+  html += '</div>';
+
+  html += h.map(function(e) {
+    var thumb = e.thumbnail
+      ? '<img src="'+e.thumbnail+'" style="width:70px;height:92px;object-fit:cover;border-radius:8px;border:2px solid rgba(0,153,68,0.5);flex-shrink:0;box-shadow:0 2px 8px rgba(0,0,0,0.4)">'
+      : '<div style="width:70px;height:92px;background:linear-gradient(135deg,#004d26,#1a0a00);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:28px;border:2px solid rgba(0,153,68,0.3);flex-shrink:0">'+(e.templateEmoji||'📄')+'</div>';
+
+    // Calcul articles
+    var itemInfo = e.itemCount ? '<span style="background:rgba(255,255,255,0.08);border-radius:4px;padding:2px 6px;font-size:0.68rem;color:rgba(255,255,255,0.4)">'+e.itemCount+' article(s)</span>' : '';
+    var orderInfo = e.orderNo ? ' <span style="font-size:0.72rem;color:rgba(255,255,255,0.35)">#'+e.orderNo+'</span>' : '';
+
+    return '<div style="background:rgba(0,0,0,0.5);border-radius:12px;padding:12px;margin-bottom:10px;border:1px solid rgba(255,255,255,0.08);display:flex;gap:12px;align-items:flex-start;transition:border 0.2s" onclick="this.style.border=\'1px solid rgba(206,17,38,0.5)\'">' +
+      thumb +
+      '<div style="flex:1;min-width:0">' +
+        '<div style="font-weight:700;font-size:0.92rem;color:#fff;margin-bottom:2px">'+e.docType+orderInfo+'</div>' +
+        '<div style="font-size:0.85rem;color:rgba(255,255,255,0.75);margin-bottom:3px">👤 '+(e.clientName||'—')+'</div>' +
+        (e.clientPhone ? '<div style="font-size:0.72rem;color:rgba(255,255,255,0.4);margin-bottom:3px">📞 '+e.clientPhone+'</div>' : '') +
+        '<div style="font-family:Oswald,sans-serif;font-size:1.2rem;font-weight:700;color:#CE1126;margin-bottom:4px">'+(e.total||0).toLocaleString('fr-FR')+' FG</div>' +
+        '<div style="display:flex;gap:5px;flex-wrap:wrap;margin-bottom:4px">' +
+          '<span style="background:rgba(0,77,38,0.4);border:1px solid rgba(0,153,68,0.3);border-radius:4px;padding:2px 6px;font-size:0.68rem;color:rgba(255,255,255,0.5)">'+(e.templateEmoji||'')+' '+(e.templateName||'')+'</span>' +
+          itemInfo +
+        '</div>' +
+        (e.bizName ? '<div style="font-size:0.7rem;color:rgba(255,255,255,0.3);margin-bottom:3px">🏢 '+e.bizName+'</div>' : '') +
+        '<div style="font-size:0.7rem;color:rgba(255,255,255,0.25)">📅 '+(e.date||'')+' à '+(e.time||'')+'</div>' +
+        '<button onclick="event.stopPropagation();deleteHistory('+e.id+')" style="background:none;border:1px solid rgba(255,255,255,0.1);color:rgba(255,255,255,0.3);padding:3px 8px;border-radius:6px;font-size:0.72rem;cursor:pointer;margin-top:6px">🗑️ Supprimer</button>' +
+      '</div></div>';
+  }).join('');
+
+  // Pagination buttons
+  if (maxPage > 0) {
+    html += '<div style="display:flex;justify-content:center;gap:10px;margin-top:14px;padding-bottom:10px">';
+    if (page > 0) html += '<button onclick="window._histPage='+(page-1)+';renderHistoryList()" style="background:rgba(206,17,38,0.3);border:1px solid rgba(206,17,38,0.5);color:#fff;padding:8px 20px;border-radius:8px;cursor:pointer;font-size:0.85rem">◀ Précédent</button>';
+    html += '<span style="color:rgba(255,255,255,0.4);font-size:0.8rem;line-height:34px">'+(page+1)+' / '+(maxPage+1)+'</span>';
+    if (page < maxPage) html += '<button onclick="window._histPage='+(page+1)+';renderHistoryList()" style="background:rgba(0,77,38,0.4);border:1px solid rgba(0,153,68,0.5);color:#fff;padding:8px 20px;border-radius:8px;cursor:pointer;font-size:0.85rem">Suivant ▶</button>';
+    html += '</div>';
+  }
+
+  el.innerHTML = html;
+}
+
+function renderClientsList() {
+  var h = filterHistoryByDate(getHistory());
+  updateHistoryStats(h);
+  // Regrouper par client
+  var map = {};
+  h.forEach(function(e) {
+    var name = e.clientName && e.clientName !== '—' ? e.clientName : '(Sans nom)';
+    if (!map[name]) map[name] = { name: name, phone: e.clientPhone||'', count: 0, total: 0, last: e.date, entries: [] };
+    map[name].count++;
+    map[name].total += (e.total||0);
+    map[name].entries.push(e);
+  });
+  var clients = Object.values(map).sort(function(a,b){ return b.count - a.count; });
+  var el = document.getElementById('clientsList');
+  if (!el) return;
+  if (!clients.length) {
+    el.innerHTML = '<div style="text-align:center;padding:60px 20px;color:rgba(255,255,255,0.3)"><div style="font-size:48px;margin-bottom:12px">👥</div><div style="font-size:0.9rem">Aucun client pour cette période.</div></div>';
+    return;
+  }
+  var html = '<div style="margin-bottom:14px;color:rgba(255,255,255,0.6);font-size:0.82rem">'+clients.length+' client(s) unique(s)</div>';
+  html += clients.map(function(c, ci) {
+    var details = c.entries.map(function(e) {
+      return '<div style="background:rgba(0,0,0,0.3);border-radius:8px;padding:8px 10px;margin-top:6px;display:flex;justify-content:space-between;align-items:center">' +
+        '<div>' +
+          '<div style="font-size:0.78rem;color:#fff">'+(e.docType||'Reçu')+(e.orderNo ? ' #'+e.orderNo : '')+'</div>' +
+          '<div style="font-size:0.68rem;color:rgba(255,255,255,0.35)">📅 '+(e.date||'')+'</div>' +
+        '</div>' +
+        '<div style="font-family:Oswald,sans-serif;font-size:0.95rem;font-weight:700;color:#CE1126">'+(e.total||0).toLocaleString('fr-FR')+' FG</div>' +
+      '</div>';
+    }).join('');
+    return '<div style="background:rgba(0,0,0,0.45);border-radius:12px;padding:13px;margin-bottom:10px;border:1px solid rgba(255,255,255,0.1)">' +
+      '<div onclick="toggleClientDetails(\'cd'+ci+'\')" style="display:flex;justify-content:space-between;align-items:center;cursor:pointer">' +
+        '<div style="display:flex;align-items:center;gap:10px">' +
+          '<div style="width:40px;height:40px;background:linear-gradient(135deg,#CE1126,#8B0010);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0">👤</div>' +
+          '<div>' +
+            '<div style="font-weight:700;font-size:0.92rem;color:#fff">'+c.name+'</div>' +
+            (c.phone ? '<div style="font-size:0.72rem;color:rgba(255,255,255,0.4)">📞 '+c.phone+'</div>' : '') +
+          '</div>' +
+        '</div>' +
+        '<div style="text-align:right">' +
+          '<div style="font-family:Oswald,sans-serif;font-size:1rem;font-weight:700;color:#CE1126">'+c.total.toLocaleString('fr-FR')+' FG</div>' +
+          '<div style="font-size:0.7rem;color:rgba(255,255,255,0.4)">'+c.count+' reçu(s)</div>' +
+        '</div>' +
+      '</div>' +
+      '<div id="cd'+ci+'" style="display:none;margin-top:6px;border-top:1px solid rgba(255,255,255,0.08);padding-top:6px">'+details+'</div>' +
+    '</div>';
+  }).join('');
+  el.innerHTML = html;
+}
+
+function toggleClientDetails(id) {
+  var el = document.getElementById(id);
+  if (!el) return;
+  el.style.display = el.style.display === 'none' ? 'block' : 'none';
+}
+
+function deleteHistory(id) {
+  var h = getHistory().filter(function(e){ return e.id !== id; });
+  saveHistory(h);
+  renderHistoryList();
+}
+function clearHistory() {
+  if (!confirm('Effacer tout l\'historique ?')) return;
+  saveHistory([]);
+  renderHistoryList();
+}
+
 </script>
 
 <!-- ADMIN PASSWORD MODAL -->
 <div id="adminPwdModal" style="display:none;position:fixed;inset:0;z-index:999999;background:rgba(0,0,0,0.8);align-items:center;justify-content:center;font-family:Lato,sans-serif">
-  <div style="background:#1a2e4a;border-radius:16px;padding:28px;width:90%;max-width:340px;box-shadow:0 24px 64px rgba(0,0,0,0.6)">
+  <div style="background:#004d26;border-radius:16px;padding:28px;width:90%;max-width:340px;box-shadow:0 24px 64px rgba(0,0,0,0.6)">
     <div style="text-align:center;margin-bottom:20px">
       <div style="font-size:36px;margin-bottom:8px">🛡️</div>
       <div style="font-family:Oswald,sans-serif;font-size:1.2rem;font-weight:700;color:#fff;letter-spacing:2px">ACCÈS ADMIN</div>
     </div>
     <input type="password" id="adminPwdInput" placeholder="Mot de passe admin" 
-      style="width:100%;background:#0d1b2e;border:1.5px solid #2d4a6e;border-radius:8px;color:#fff;padding:12px 14px;font-size:1rem;font-family:Lato,sans-serif;outline:none;box-sizing:border-box;margin-bottom:10px"
+      style="width:100%;background:#1a0a00;border:1.5px solid #006633;border-radius:8px;color:#fff;padding:12px 14px;font-size:1rem;font-family:Lato,sans-serif;outline:none;box-sizing:border-box;margin-bottom:10px"
       onkeydown="if(event.key==='Enter') confirmAdminPwd()">
     <div id="adminPwdError" style="color:#ef4444;font-size:0.82rem;margin-bottom:10px;display:none">❌ Mot de passe incorrect</div>
-    <button onclick="confirmAdminPwd()" style="width:100%;padding:12px;background:linear-gradient(135deg,#e8621a,#c0521a);color:#fff;border:none;border-radius:8px;font-family:Oswald,sans-serif;font-size:1rem;font-weight:700;letter-spacing:2px;cursor:pointer;margin-bottom:8px">ENTRER</button>
+    <button onclick="confirmAdminPwd()" style="width:100%;padding:12px;background:linear-gradient(135deg,#CE1126,#a50e1f);color:#fff;border:none;border-radius:8px;font-family:Oswald,sans-serif;font-size:1rem;font-weight:700;letter-spacing:2px;cursor:pointer;margin-bottom:8px">ENTRER</button>
     <button onclick="closeAdminPwd()" style="width:100%;padding:10px;background:transparent;color:rgba(255,255,255,0.5);border:1px solid rgba(255,255,255,0.2);border-radius:8px;font-family:Oswald,sans-serif;font-size:0.85rem;cursor:pointer">Annuler</button>
   </div>
 </div>
 
 <!-- ADMIN SCREEN -->
-<div id="adminScreen" style="display:none;position:fixed;inset:0;z-index:99999;background:#0a1628;flex-direction:column;font-family:Lato,sans-serif;overflow:hidden">
-  <div style="background:linear-gradient(135deg,#1a2e4a,#0d1b2e);padding:14px 18px;display:flex;align-items:center;justify-content:space-between;border-bottom:2px solid #e8621a;flex-shrink:0">
+<div id="adminScreen" style="display:none;position:fixed;inset:0;z-index:99999;background:#001a09;flex-direction:column;font-family:Lato,sans-serif;overflow:hidden">
+  <div style="background:linear-gradient(135deg,#004d26,#1a0a00);padding:14px 18px;display:flex;align-items:center;justify-content:space-between;border-bottom:2px solid #CE1126;flex-shrink:0">
     <div style="display:flex;align-items:center;gap:10px">
       <span style="font-size:22px">🛡️</span>
       <span style="font-family:Oswald,sans-serif;font-size:1.1rem;font-weight:700;color:#fff;letter-spacing:2px">TABLEAU DE BORD ADMIN</span>
     </div>
     <button onclick="hideAdmin()" style="background:rgba(255,255,255,0.1);border:none;color:#fff;font-size:20px;cursor:pointer;width:34px;height:34px;border-radius:8px;display:flex;align-items:center;justify-content:center">✕</button>
   </div>
-  <div style="display:flex;background:#0d1b2e;border-bottom:1px solid #1a2e4a;flex-shrink:0;overflow-x:auto" id="adminTabBar">
+  <div style="display:flex;background:#1a0a00;border-bottom:1px solid #004d26;flex-shrink:0;overflow-x:auto" id="adminTabBar">
     <button class="admin-tab active" onclick="adminTab('overview')">📊 Vue d'ensemble</button>
     <button class="admin-tab" onclick="adminTab('users')">👥 Utilisateurs</button>
     <button class="admin-tab" onclick="adminTab('codes')">🔑 Codes</button>
   </div>
   <div id="adminContent" style="flex:1;overflow-y:auto;padding:16px;-webkit-overflow-scrolling:touch"></div>
+</div>
+
+<!-- HISTORY SCREEN -->
+<div id="historyScreen" style="display:none;position:fixed;inset:0;z-index:99997;background:linear-gradient(160deg,#CE1126 0%,#8B0010 20%,#4a0800 38%,#3d2000 52%,#004d26 78%,#009A44 100%);flex-direction:column;font-family:'Lato',sans-serif">
+  <!-- EN-TÊTE -->
+  <div style="background:rgba(0,0,0,0.55);padding:13px 16px;display:flex;align-items:center;justify-content:space-between;border-bottom:2px solid #CE1126;flex-shrink:0;backdrop-filter:blur(6px)">
+    <div style="display:flex;align-items:center;gap:10px">
+      <span style="font-size:22px">📋</span>
+      <span style="font-family:'Oswald',sans-serif;font-size:1.1rem;font-weight:700;color:#fff;letter-spacing:2px">MES REÇUS</span>
+    </div>
+    <!-- Onglets -->
+    <div style="display:flex;gap:6px">
+      <button id="tabRecus" onclick="switchHistoryTab('recus')" style="background:#CE1126;border:none;color:#fff;padding:6px 14px;border-radius:8px;font-size:0.8rem;cursor:pointer;font-weight:700">📄 Reçus</button>
+      <button id="tabClients" onclick="switchHistoryTab('clients')" style="background:rgba(255,255,255,0.12);border:none;color:#fff;padding:6px 14px;border-radius:8px;font-size:0.8rem;cursor:pointer">👥 Clients</button>
+    </div>
+    <button onclick="hideHistory()" style="background:rgba(255,255,255,0.1);border:none;color:#fff;font-size:20px;cursor:pointer;width:34px;height:34px;border-radius:8px">✕</button>
+  </div>
+
+  <!-- FILTRES -->
+  <div id="historyFilters" style="background:rgba(0,0,0,0.4);padding:10px 16px;flex-shrink:0;border-bottom:1px solid rgba(255,255,255,0.1)">
+    <div style="display:flex;gap:7px;flex-wrap:wrap;align-items:center">
+      <span style="color:rgba(255,255,255,0.6);font-size:0.78rem;font-weight:600">FILTRER :</span>
+      <button id="f_all" onclick="setHistoryFilter('all')" style="background:#CE1126;border:none;color:#fff;padding:5px 12px;border-radius:20px;font-size:0.76rem;cursor:pointer;font-weight:700">Tout</button>
+      <button id="f_week" onclick="setHistoryFilter('week')" style="background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.2);color:#fff;padding:5px 12px;border-radius:20px;font-size:0.76rem;cursor:pointer">Cette semaine</button>
+      <button id="f_month" onclick="setHistoryFilter('month')" style="background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.2);color:#fff;padding:5px 12px;border-radius:20px;font-size:0.76rem;cursor:pointer">Ce mois</button>
+      <button id="f_year" onclick="setHistoryFilter('year')" style="background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.2);color:#fff;padding:5px 12px;border-radius:20px;font-size:0.76rem;cursor:pointer">Cette année</button>
+    </div>
+    <!-- Barre de recherche client (visible dans onglet reçus) -->
+    <div id="historySearchBar" style="margin-top:8px">
+      <input id="historySearch" type="text" placeholder="🔍 Rechercher un client..." oninput="window._histPage=0;renderHistoryList()" style="width:100%;box-sizing:border-box;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);color:#fff;padding:7px 12px;border-radius:8px;font-size:0.82rem;outline:none">
+    </div>
+  </div>
+
+  <!-- STATS RAPIDES -->
+  <div id="historyStats" style="background:rgba(0,0,0,0.3);padding:10px 16px;flex-shrink:0;display:flex;gap:10px;border-bottom:1px solid rgba(255,255,255,0.08)">
+    <div id="statCount" style="flex:1;background:rgba(206,17,38,0.2);border:1px solid rgba(206,17,38,0.4);border-radius:10px;padding:8px;text-align:center">
+      <div style="font-family:Oswald,sans-serif;font-size:1.2rem;font-weight:700;color:#ff6b6b" id="statCountVal">0</div>
+      <div style="font-size:0.68rem;color:rgba(255,255,255,0.5)">Reçus</div>
+    </div>
+    <div style="flex:1;background:rgba(0,77,38,0.25);border:1px solid rgba(0,153,68,0.3);border-radius:10px;padding:8px;text-align:center">
+      <div style="font-family:Oswald,sans-serif;font-size:1.0rem;font-weight:700;color:#4ade80" id="statTotalVal">0 FG</div>
+      <div style="font-size:0.68rem;color:rgba(255,255,255,0.5)">Total</div>
+    </div>
+    <div style="flex:1;background:rgba(255,165,0,0.15);border:1px solid rgba(255,165,0,0.3);border-radius:10px;padding:8px;text-align:center">
+      <div style="font-family:Oswald,sans-serif;font-size:1.2rem;font-weight:700;color:#fbbf24" id="statClientsVal">0</div>
+      <div style="font-size:0.68rem;color:rgba(255,255,255,0.5)">Clients</div>
+    </div>
+  </div>
+
+  <!-- CONTENU -->
+  <div style="flex:1;overflow-y:auto;padding:14px 16px;-webkit-overflow-scrolling:touch">
+    <div id="historyList"></div>
+    <div id="clientsList" style="display:none"></div>
+  </div>
 </div>
 </body>
 </html>
